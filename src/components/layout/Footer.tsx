@@ -65,17 +65,17 @@ export const Footer = () => {
           </h3>
           <ul className="space-y-3 text-sm font-medium text-gray-400">
             <li>
-              <Link href="#" className="transition-colors hover:text-indigo-400">
+              <Link href="/gizlilik" className="transition-colors hover:text-indigo-400">
                 Gizlilik Politikası
               </Link>
             </li>
             <li>
-              <Link href="#" className="transition-colors hover:text-indigo-400">
+              <Link href="/kullanim-sartlari" className="transition-colors hover:text-indigo-400">
                 Kullanım Şartları
               </Link>
             </li>
             <li>
-              <Link href="#" className="transition-colors hover:text-indigo-400">
+              <Link href="/iletisim" className="transition-colors hover:text-indigo-400">
                 İletişim
               </Link>
             </li>

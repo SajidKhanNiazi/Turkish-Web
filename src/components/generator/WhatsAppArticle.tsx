@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "../layout/Container";
+import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
 export const WhatsAppArticle = () => {
@@ -25,7 +26,7 @@ export const WhatsAppArticle = () => {
 
                           <p>Bazen normal bir WhatsApp mesajı çok sade görünür. Bir kelimenin dikkat çekmesini, durum yazınızın daha iyi görünmesini ya da biyografinizin daha kişisel olmasını istersiniz; ancak nereden başlayacağınızı bilemezsiniz. Ben de bunu daha önce yaşadım. Özellikle kısa bir mesajı uzatmadan daha dikkat çekici yapmak istediğimde bu ihtiyaç daha net hissediliyor.</p>
 
-                          <p>İşte burada <strong>WhatsApp yazı stili</strong> işe yarar. Birkaç basit işaret ile metni WhatsApp içinde biçimlendirebilirsiniz. Ayrıca kopyala-yapıştır Unicode stilleri ile biyografinizi veya durumunuzu daha farklı gösterebilirsiniz. Bu rehberde iki yöntemi de çok basit şekilde anlatacağım.</p>
+                          <p>İşte burada <Link href="/"><strong>yazı stilleri</strong></Link> ve <strong>WhatsApp yazı stili</strong> işe yarar. Birkaç basit işaret ile metni WhatsApp içinde biçimlendirebilirsiniz. Ayrıca kopyala-yapıştır Unicode stilleri ile biyografinizi veya durumunuzu daha farklı gösterebilirsiniz. Bu rehberde iki yöntemi de çok basit şekilde anlatacağım.</p>
 
                           <h2>WhatsApp yazı stili ne demek?</h2>
 

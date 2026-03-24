@@ -12,7 +12,7 @@ const colorThemes = [
 ];
 
 export const ExploreStyles = () => {
-    const allCategories = [...silo1Categories, ...silo2Categories];
+    const allCategories = [...silo1Categories];
 
     return (
         <section className="py-20 bg-[#0B0F1A] relative z-20">

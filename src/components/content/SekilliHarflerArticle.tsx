@@ -30,7 +30,7 @@ export const SekilliHarflerArticle = () => {
                                 Sıradan harflerle yazılan bir nick, sosyal medyada ya da oyun lobisinde hiç dikkat çekmiyor. Herkes aynı yazı tipini kullanıyor ve bu durum sizi kalabalığın içinde kaybettiriyor. Özellikle PUBG, Discord veya Instagram gibi platformlarda fark yaratmak giderek zorlaşıyor.
                            </p>
                            <p className="text-lg text-purple-200 font-medium relative z-10">
-                                İşte bu sorunu çözmek için <strong>şekilli harfler</strong> var. Herhangi bir uygulama yüklemeden, dakikalar içinde metninizi onlarca farklı değişik harf stiline dönüştürebilirsiniz. Yalnızca tek bir harf değil, tam kelime ve cümleler oluşturmak istiyorsanız <Link href="/sekilli-yazi"><strong>Şekilli Yazı</strong></Link> aracımız da tam size göre. Bu rehberde şekilli harflerin ne olduğunu, nasıl çalıştığını ve her platformda nasıl doğru kullanacağınızı adım adım açıklıyorum.
+                                 İşte bu sorunu çözmek için <strong>şekilli harfler</strong> var. Herhangi bir uygulama yüklemeden, dakikalar içinde metninizi onlarca farklı değişik harf stiline dönüştürebilirsiniz. Yalnızca tek bir harf değil, tam kelime ve cümleler oluşturmak istiyorsanız <Link href="/sekilli-yazi"><strong>şekilli yazı</strong></Link> aracımız da tam size göre. Bu rehberde şekilli harflerin ne olduğunu, nasıl çalıştığını ve her platformda nasıl doğru kullanacağınızı adım adım açıklıyorum.
                            </p>
                         </div>
 

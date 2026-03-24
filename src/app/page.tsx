@@ -1,21 +1,41 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site";
+
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { HomeArticle } from "@/components/home/HomeArticle";
 import { ExploreStyles } from "@/components/home/ExploreStyles";
 
 export const metadata: Metadata = {
-  title: `Yazı Stilleri: 300+ Güzel, Şekilli ve Havalı Yazı Tipleri (Kopyala) | ${siteConfig.name}`,
+  title: "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala)",
   description:
-    "Yazı stilleri ile metninizi şekilli yazıya dönüştürün. Instagram bio, WhatsApp durum, Discord kullanıcı adı ve oyun nickleri için 300+ farklı yazı stili keşfedin ve hemen kopyalayın.",
+    "Yazı stilleri oluşturucu ile metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Kopyala-yapıştır ile Instagram, PUBG ve WhatsApp için kullanın.",
   alternates: {
     canonical: "/"
   }
 };
 
 const HomePage = () => {
+  const toolJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Yazı Stilleri Oluşturucu",
+    "url": "https://lightpink-viper-961727.hostingersite.com/",
+    "description": "Metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Instagram, PUBG ve WhatsApp için ücretsiz.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TRY"
+    },
+    "inLanguage": "tr"
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
+      />
       <HeroGeneratorSection 
         title={
           <>

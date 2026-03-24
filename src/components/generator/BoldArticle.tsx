@@ -20,7 +20,7 @@ export const BoldArticle = () => {
                         [&>h2]:before:content-[''] [&>h2]:before:w-2 [&>h2]:before:h-8 [&>h2]:before:bg-indigo-400 [&>h2]:before:rounded-full
                         [&>h3]:mt-12 [&>h3]:text-2xl [&>h3]:font-bold">
                         
-                        <h2>Kalın Yazı Stili: Kopyala ve Yapıştır</h2>
+                        <h1>Kalın Yazı Stili: Kopyala-Yapıştır Bold ve Kalın Yazı Oluşturucu</h1>
                         
                         <p className="text-xl text-gray-400 leading-relaxed border-l-4 border-white/[0.06] pl-6 py-2 mb-12 italic">
                             Hiç Instagram veya TikTok için yazınızı kalın yapmak istediniz ama kolay bir yol bulamadınız mı? Birçok kişi sosyal medya biyografileri, oyun kullanıcı adları veya mesajları için kalın yazı stili arar.

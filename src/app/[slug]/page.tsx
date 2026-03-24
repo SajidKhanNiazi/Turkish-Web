@@ -7,6 +7,8 @@ import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { ContentSection } from "@/components/home/ContentSection";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { silo1Categories } from "@/data/categories";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 import { GeneratorListType } from "@/components/home/HeroGeneratorSection";
 
 interface PageProps {
@@ -76,6 +78,15 @@ export default function SiloPage({ params }: PageProps) {
     return (
         <>
             <main className="flex-1 flex flex-col font-sans">
+                <Breadcrumbs items={[
+                    { name: "Ana Sayfa", item: "/" },
+                    { name: category.title, item: `/${category.slug}` }
+                ]} />
+                <ToolSchema 
+                    name={`${category.title} Aracı`}
+                    description={category.description}
+                    url={`/${category.slug}`}
+                />
                 <HeroGeneratorSection 
                     title={customTitle} 
                     description={customDescription} 

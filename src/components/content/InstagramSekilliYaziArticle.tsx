@@ -22,7 +22,7 @@ export const InstagramSekilliYaziArticle = () => {
 
                         <p>Instagram profiline giriyorsun. Her şey normal görünüyor. Ama bir sorun var. Profilin diğerlerinden farklı değil. Aynı yazı, aynı stil. Kimse dikkat etmiyor.</p>
 
-                        <p>Daha kötüsü, Instagram font değiştirme seçeneği sunmaz. Bu yüzden profilin sıradan kalır. Ancak çözüm çok basit: <strong>Instagram şekilli yazı</strong>.</p>
+                        <p>Daha kötüsü, Instagram font değiştirme seçeneği sunmaz. Bu yüzden profilin sıradan kalır. Ancak çözüm çok basit: <Link href="/sekilli-yazi"><strong>şekilli yazı</strong></Link>.</p>
 
                         <hr className="border-white/10 my-12" />
 
@@ -58,7 +58,7 @@ export const InstagramSekilliYaziArticle = () => {
                         <h2>Şekilli Yazı Nasıl Yapılır?</h2>
                         <div className="space-y-4 my-8 not-prose">
                             {[
-                                <Link key="step1" href="/sekilli-yazi" className="text-pink-400 hover:text-pink-300 transition-colors underline underline-offset-4 decoration-pink-400/30 hover:decoration-pink-400">Şekilli yazı aracını aç</Link>,
+                                <Link key="step1" href="/sekilli-yazi" className="text-pink-400 hover:text-pink-300 transition-colors underline underline-offset-4 decoration-pink-400/30 hover:decoration-pink-400">şekilli yazı aracını aç</Link>,
                                 "Metnini yaz",
                                 "Stil seç",
                                 "Kopyala",

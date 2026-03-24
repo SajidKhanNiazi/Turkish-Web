@@ -20,7 +20,7 @@ export const SekilliYaziArticle = () => {
                         [&>h2]:before:content-[''] [&>h2]:before:w-2 [&>h2]:before:h-8 [&>h2]:before:bg-indigo-400 [&>h2]:before:rounded-full
                         [&>h3]:mt-12 [&>h3]:text-2xl [&>h3]:font-bold">
                         
-                        <h1>Şekilli Yazı Nedir? Yazı Stilleri, Türleri ve Kullanım Rehberi (2026)</h1>
+                        <h1>Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu (2026)</h1>
                         
                         <div className="bg-[#111827] p-8 md:p-10 rounded-3xl border border-white/[0.06] mb-12 shadow-2xl relative overflow-hidden group">
                            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -69,7 +69,7 @@ export const SekilliYaziArticle = () => {
 
                         <h2>Şekilli Yazı Türleri: Hangi Stili Seçmelisiniz?</h2>
                         <p>
-                            Pek çok farklı şekilli yazı stili mevcuttur. Bunların arasında en popüler olanları belirli platformlar için öne çıkmaktadır. <Link href="/"><strong>Yazı Stilleri</strong></Link> sayfamızda tüm stil seçeneklerini tek tıkla inceleyebilir ve istediğinizi anında kopyalayabilirsiniz. Aşağıdaki tablo ise en sık tercih edilen türleri ve kullanım alanlarını özetlemektedir.
+                            Pek çok farklı şekilli yazı stili mevcuttur. Bunların arasında en popüler olanları belirli platformlar için öne çıkmaktadır. <Link href="/"><strong>yazı stilleri</strong></Link> sayfamızda tüm stil seçeneklerini tek tıkla inceleyebilir ve istediğinizi anında kopyalayabilirsiniz. Aşağıdaki tablo ise en sık tercih edilen türleri ve kullanım alanlarını özetlemektedir.
                         </p>
 
                         <div className="overflow-hidden rounded-3xl border border-white/[0.06] bg-[#111827] my-12 shadow-xl">

@@ -4,11 +4,13 @@ import { EmojiToolSection } from "@/components/generator/EmojiToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { SekilliEmojiYaziArticle } from "@/components/content/SekilliEmojiYaziArticle";
 import { silo2Categories } from "@/data/categories";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: `Şekilli Emoji Yazı Oluşturucu: Metne Sembol Ekle | ${siteConfig.name}`,
+  title: "Şekilli Emoji Yazı: Sembollü Yazı Oluşturucu ve Kopyala | YazıStilleriPro",
   description:
-    "Metinlerinizi emoji, sembol ve kaomojilerle süsleyin. En şirin ve ateşli estetik emoji yazıları tek tıkla kopyala.",
+    "Şekilli emoji yazı oluşturucu ile sembollü ve emojili metinler oluşturun. Şekilli sayı yazma ve noktalarla emoji için kopyala-yapıştır aracı.",
   alternates: {
     canonical: "/sekilli-yazi/sekilli-emoji-yazi"
   }
@@ -17,6 +19,16 @@ export const metadata: Metadata = {
 export default function EmojiFontsPage() {
   return (
     <main className="flex-1 flex flex-col font-sans">
+      <Breadcrumbs items={[
+        { name: "Ana Sayfa", item: "/" },
+        { name: "Şekilli Yazı", item: "/sekilli-yazi" },
+        { name: "Şekilli Emoji Yazı", item: "/sekilli-yazi/sekilli-emoji-yazi" }
+      ]} />
+      <ToolSchema 
+        name="Şekilli Emoji Yazı Oluşturucu"
+        description="Şekilli emoji yazı oluşturucu ile sembollü ve emojili metinler oluşturun. Şekilli sayı yazma ve noktalarla emoji için kopyala-yapıştır aracı."
+        url="/sekilli-yazi/sekilli-emoji-yazi"
+      />
       <section className="relative overflow-hidden bg-[#0B0F1A] pt-16 pb-16 sm:pt-28 border-b border-white/[0.06]">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950/20 via-[#0B0F1A] to-[#0B0F1A]" />
         

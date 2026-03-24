@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { BoldArticle } from "@/components/generator/BoldArticle";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: `Kalın Yazı Stili (Kopyala ve Yapıştır) – 100+ Kalın Font Örnekleri | ${siteConfig.name}`,
+  title: "Kalın Yazı Stili: Kopyala-Yapıştır Bold Yazı Oluşturucu | YazıStilleriPro",
   description:
-    "Kalın yazı stili ile metninizi anında kalın fontlara dönüştürün. Instagram, TikTok, Discord ve WhatsApp için 100+ kalın yazı örneğini kopyala ve yapıştır.",
+    "Kalın yazı stili oluşturucu ile Unicode bold yazılar oluşturun. Instagram biyografi, WhatsApp durum ve oyun nickleri için tek tıkla kopyala-yapıştır.",
   alternates: {
     canonical: "/kalin-yazi-stili"
   }
@@ -16,6 +18,15 @@ const BoldTextPage = () => {
   return (
     <>
       <main className="flex-1 flex flex-col font-sans">
+        <Breadcrumbs items={[
+          { name: "Ana Sayfa", item: "/" },
+          { name: "Kalın Yazı Stili", item: "/kalin-yazi-stili" }
+        ]} />
+        <ToolSchema 
+          name="Kalın Yazı Stili Oluşturucu"
+          description="Kalın yazı stili oluşturucu ile Unicode bold yazılar oluşturun. Instagram, WhatsApp ve Discord için tek tıkla kopyalayın."
+          url="/kalin-yazi-stili"
+        />
         <HeroGeneratorSection 
             title={
               <>

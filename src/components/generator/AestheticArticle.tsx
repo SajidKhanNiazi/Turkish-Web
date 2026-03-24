@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "../layout/Container";
+import Link from "next/link";
 import { Sparkles, CheckCircle2, ChevronDown } from "lucide-react";
 
 export const AestheticArticle = () => {
@@ -27,7 +28,7 @@ export const AestheticArticle = () => {
                         </p>
 
                         <p>
-                            Sonunda, dekoratif metin stilleri bu sorunu çözdü. Normal harfleri şık Unicode karakterlerine dönüştürerek metin anında yaratıcı ve dikkat çekici hâle geldi. Bu keşif sayesinde, Yazı Stilleri platformumuz kullanıcıların dekoratif metinleri kolayca oluşturmasına yardımcı olmak için tasarlandı. Basit bir oluşturucu ile herkes saniyeler içinde kullanıcı adları, açıklamalar ve biyografiler için <strong>dekoratif estetik yazi tipleri</strong> oluşturabilir.
+                            Sonunda, dekoratif metin stilleri bu sorunu çözdü. Normal harfleri şık Unicode karakterlerine dönüştürerek metin anında yaratıcı ve dikkat çekici hâle geldi. Bu keşif sayesinde, <Link href="/"><strong>yazı stilleri</strong></Link> platformumuz kullanıcıların dekoratif metinleri kolayca oluşturmasına yardımcı olmak için tasarlandı. Basit bir oluşturucu ile herkes saniyeler içinde kullanıcı adları, açıklamalar ve biyografiler için <strong>dekoratif estetik yazi tipleri</strong> oluşturabilir.
                         </p>
 
                         <h2>Dekoratif Estetik Metin Oluşturucu</h2>

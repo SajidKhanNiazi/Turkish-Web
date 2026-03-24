@@ -4,11 +4,13 @@ import { InstagramToolSection } from "@/components/generator/InstagramToolSectio
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { InstagramSekilliYaziArticle } from "@/components/content/InstagramSekilliYaziArticle";
 import { silo2Categories } from "@/data/categories";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: `Instagram Şekilli Yazı (Kopyala Yapıştır + Türkçe Destek) | ${siteConfig.name}`,
+  title: "Instagram Şekilli Yazı: Bio ve Profil için Font Oluşturucu | YazıStilleriPro",
   description:
-    "Instagram şekilli yazı ile profilini öne çıkar. Biyografi, gönderi ve DM için 40+ stil. Türkçe karakter destekli. Ücretsiz ve güvenli.",
+    "Instagram şekilli yazı oluşturucu ile bio ve profilini özelleştir. Instagram biosuna şekilli yazı yazma rehberi — kopyala-yapıştır ile saniyeler içinde kullan.",
   alternates: {
     canonical: "/sekilli-yazi/instagram-sekilli-yazi"
   }
@@ -17,6 +19,16 @@ export const metadata: Metadata = {
 export default function InstagramFontsPage() {
   return (
     <main className="flex-1 flex flex-col font-sans">
+      <Breadcrumbs items={[
+        { name: "Ana Sayfa", item: "/" },
+        { name: "Şekilli Yazı", item: "/sekilli-yazi" },
+        { name: "Instagram Şekilli Yazı", item: "/sekilli-yazi/instagram-sekilli-yazi" }
+      ]} />
+      <ToolSchema 
+        name="Instagram Şekilli Yazı Oluşturucu"
+        description="Instagram şekilli yazı oluşturucu ile bio ve profilini özelleştir. Instagram biosuna şekilli yazı yazma rehberi — kopyala-yapıştır ile saniyeler içinde kullan."
+        url="/sekilli-yazi/instagram-sekilli-yazi"
+      />
       <section className="relative overflow-hidden bg-[#0B0F1A] pt-16 pb-16 sm:pt-28 border-b border-white/[0.06]">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950/20 via-[#0B0F1A] to-[#0B0F1A]" />
         

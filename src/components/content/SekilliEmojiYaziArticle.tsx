@@ -20,9 +20,9 @@ export const SekilliEmojiYaziArticle = () => {
 
                         <div className="text-4xl md:text-5xl font-black text-white mb-10 tracking-tight">Şekilli Emoji Yazı: Kolay Kullanım ve Copy-Paste Rehberi</div>
 
-                        <p>Instagram biyografinizi, TikTok başlıklarınızı veya WhatsApp durumunuzu öne çıkarmak mı istiyorsunuz? Düz metin genellikle sıkıcı görünebilir. Birçok kullanıcı mesajlarını görsel olarak çekici hale getirmekte zorlanır.</p>
+                        <p>Instagram biyografinizi, TikTok başlıklarını veya WhatsApp durumunuzu öne çıkarmak mı istiyorsunuz? Düz metin genellikle sıkıcı görünebilir. Birçok kullanıcı mesajlarını görsel olarak çekici hale getirmekte zorlanır.</p>
                         
-                        <p><strong>Şekilli Emoji Yazı</strong> bunun çözümüdür. Emojilerle stilize edilmiş yazılar, dikkat çekmeyi hemen sağlar. Bu rehberde, emoji yazılarını nasıl oluşturacağınızı, kullanacağınızı ve hızlıca kopyalayacağınızı öğreneceksiniz.</p>
+                        <p><strong>Şekilli Emoji Yazı</strong> ve <Link href="/sekilli-yazi"><strong>şekilli yazı</strong></Link> bunun çözümüdür. Emojilerle stilize edilmiş yazılar, dikkat çekmeyi hemen sağlar. Bu rehberde, emoji yazılarını nasıl oluşturacağınızı, kullanacağınızı ve hızlıca kopyalayacağınızı öğreneceksiniz.</p>
 
                         <hr className="border-white/10 my-12" />
 
@@ -198,7 +198,7 @@ export const SekilliEmojiYaziArticle = () => {
                         <p>Gelişmiş emoji yazıları oluşturmak için güvenilir araçları kullanın:</p>
                         <ul>
                             <li><a href="https://www.messletters.com/en/text-tools/" target="_blank" rel="noopener noreferrer">Messletters Online Text & Symbols Tool</a> – Güvenilir ve mobil uyumlu</li>
-                            <li>Ayrıca sitemizdeki <Link href="/sekilli-yazi">Şekilli Yazı</Link> aracını deneyebilirsiniz</li>
+                            <li>Ayrıca sitemizdeki <Link href="/sekilli-yazi">şekilli yazı</Link> aracını deneyebilirsiniz</li>
                         </ul>
 
                         <hr className="border-white/10 my-12" />

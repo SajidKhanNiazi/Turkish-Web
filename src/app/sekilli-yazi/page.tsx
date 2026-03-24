@@ -4,11 +4,12 @@ import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { PillarToolSection } from "@/components/generator/PillarToolSection";
 import { SekilliYaziArticle } from "@/components/content/SekilliYaziArticle";
 import { silo2Categories } from "@/data/categories";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Şekilli Yazı Nedir? Yazı Stilleri, Türleri ve Kullanım Rehberi (2026)",
+  title: "Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu (2026)",
   description:
-    "Şekilli yazı nedir, nasıl yapılır? Instagram, PUBG, WhatsApp ve Discord için adım adım rehber. Tüm yazı stillerini ücretsiz keşfedin.",
+    "Şekilli yazı oluşturucu ile metninizi 50+ farklı stile dönüştürün. Hiç uygulama indirmeden kopyala-yapıştır ile hemen kullanın.",
   alternates: {
     canonical: "/sekilli-yazi"
   }
@@ -19,8 +20,23 @@ export default function PillarSekilliYaziPage() {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Şekilli Yazı Nedir? Yazı Stilleri, Türleri ve Kullanım Rehberi (2026)",
-      "description": "Şekilli yazı nedir, nasıl yapılır? Instagram, PUBG, WhatsApp ve Discord için adım adım rehber.",
+      "headline": "Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu (2026)",
+      "description": "Şekilli yazı oluşturucu ile metninizi 50+ farklı stile dönüştürün. Hiç uygulama indirmeden kopyala-yapıştır ile hemen kullanın.",
+      "inLanguage": "tr"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Şekilli Yazı Oluşturucu",
+      "url": "https://lightpink-viper-961727.hostingersite.com/sekilli-yazi",
+      "description": "Şekilli yazı oluşturucu ile 50+ farklı stile dönüştürün.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      },
       "inLanguage": "tr"
     },
     {
@@ -65,6 +81,10 @@ export default function PillarSekilliYaziPage() {
 
   return (
     <main className="flex-1 flex flex-col font-sans">
+      <Breadcrumbs items={[
+        { name: "Ana Sayfa", item: "/" },
+        { name: "Şekilli Yazı", item: "/sekilli-yazi" }
+      ]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

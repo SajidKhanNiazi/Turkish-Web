@@ -189,7 +189,7 @@ export const ItalicArticle = () => {
                                 İtalik yazı, metni daha şık ve dikkat çekici hale getirmenin en kolay yollarından biridir. Bir kelimeyi vurgulamak, sosyal medya biyografinizi süslemek veya benzersiz bir kullanıcı adı oluşturmak için oldukça etkili bir yöntemdir.
                             </p>
                             <p className="text-gray-400">
-                                <Link href="/">Font generator</Link> araçları üzerinden saniyeler içinde şık yazılar oluşturabilir ve bunları platform fark etmeksizin hemen kullanmaya başlayabilirsiniz.
+                                <Link href="/">yazı stilleri</Link> araçları üzerinden saniyeler içinde şık yazılar oluşturabilir ve bunları platform fark etmeksizin hemen kullanmaya başlayabilirsiniz.
                             </p>
                         </div>
                     </div>

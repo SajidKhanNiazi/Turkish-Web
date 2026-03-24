@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { InstagramFullArticle } from "@/components/content/InstagramFullArticle";
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Instagram Şekilli Yazı: Biyografi, Gönderi ve Hikaye Rehberi (2026)",
+  title: "Instagram Yazı Stili: Bio ve Profil Font Değiştirici | YazıStilleriPro",
   description:
-    "Instagram şekilli yazı nasıl yapılır? Biyografi, gönderi ve hikaye için adım adım rehber. Türkçe karakter desteği, 150 karakter sınırı ipuçları ve en iyi stil önerileri.",
+    "Instagram yazı stili değiştirici ile biyografi ve profilinizi özelleştirin. Instagram biyografi yazı tipi için kopyala-yapıştır — anında kullanın, uygulama yok.",
   alternates: {
     canonical: "/instagram-yazi-stili"
   }
@@ -17,8 +19,8 @@ const InstagramTextPage = () => {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Instagram Şekilli Yazı: Biyografi, Gönderi ve Hikaye Rehberi (2026)",
-      "description": "Instagram şekilli yazı nasıl yapılır? Biyografi, gönderi ve hikaye için adım adım rehber. Türkçe karakter desteği ve 150 karakter sınırı ipuçları.",
+      "headline": "Instagram Yazı Stili: Bio ve Profil Font Değiştirici | YazıStilleriPro",
+      "description": "Instagram yazı stili değiştirici ile biyografi ve profilinizi özelleştirin. Instagram biyografi yazı tipi için kopyala-yapıştır — anında kullanın, uygulama yok.",
       "inLanguage": "tr"
     },
     {
@@ -64,6 +66,15 @@ const InstagramTextPage = () => {
   return (
     <>
       <main className="flex-1 flex flex-col font-sans">
+        <Breadcrumbs items={[
+          { name: "Ana Sayfa", item: "/" },
+          { name: "Instagram Yazı Stili", item: "/instagram-yazi-stili" }
+        ]} />
+        <ToolSchema 
+          name="Instagram Şekilli Yazı Oluşturucu"
+          description="Instagram bionuz, gönderi açıklamalarınız ve hikayeleriniz için en popüler Unicode fontlarını saniyeler içinde oluşturun."
+          url="/instagram-yazi-stili"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

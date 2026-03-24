@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { ItalicArticle } from "@/components/generator/ItalicArticle";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: `İtalik Eğik Yazı: Kopyala Yapıştır İtalik Yazı Stilleri - ${siteConfig.name}`,
+  title: "İtalik Yazı: Kopyala-Yapıştır Eğik Yazı Oluşturucu | YazıStilleriPro",
   description:
-    "Normal metninizi saniyeler içinde kopyala yapıştır yapılabilen italik yazı stiline dönüştürün. Instagram, WhatsApp veya Discord için en iyi italik yazı stili oluşturucu.",
+    "İtalik yazı oluşturucu ile metninizi eğik ve zarif yazı stillerine dönüştürün. Instagram, TikTok ve Discord için kopyala-yapıştır ile anında kullanın.",
   alternates: {
     canonical: "/italik-egik-yazi"
   }
@@ -16,6 +18,15 @@ const ItalicTextPage = () => {
   return (
     <>
       <main className="flex-1 flex flex-col font-sans">
+        <Breadcrumbs items={[
+          { name: "Ana Sayfa", item: "/" },
+          { name: "İtalik Yazı", item: "/italik-egik-yazi" }
+        ]} />
+        <ToolSchema 
+          name="İtalik Yazı Oluşturucu"
+          description="İtalik yazı oluşturucu ile metninizi anında eğik fontlara dönüştürün. Sosyal medya için kopyala-yapıştır."
+          url="/italik-egik-yazi"
+        />
         <HeroGeneratorSection 
             titleTag="div"
             title={

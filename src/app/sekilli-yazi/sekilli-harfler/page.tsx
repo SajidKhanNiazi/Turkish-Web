@@ -4,11 +4,13 @@ import { LettersToolSection } from "@/components/generator/LettersToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { SekilliHarflerArticle } from "@/components/content/SekilliHarflerArticle";
 import { silo2Categories } from "@/data/categories";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Şekilli Harfler Nedir? A'dan Z'ye Değişik Harf Rehberi (2026)",
+  title: "Şekilli Harfler: A'dan Z'ye Dekoratif Harf Oluşturucu | YazıStilleriPro",
   description:
-    "Şekilli harfler nedir, nasıl kullanılır? A'dan Z'ye tüm stiller, platform rehberi, PUBG ve Instagram ipuçları. Ücretsiz kopyala-yapıştır rehberi.",
+    "Şekilli harfler oluşturucu ile tüm alfabeyi dekoratif stile dönüştürün. A'dan Z'ye her harfi kopyala-yapıştır ile Instagram, PUBG ve Discord için kullanın.",
   alternates: {
     canonical: "/sekilli-yazi/sekilli-harfler"
   }
@@ -19,8 +21,8 @@ export default function FancyLettersPage() {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Şekilli Harfler Nedir? A'dan Z'ye Değişik Harf Rehberi (2026)",
-      "description": "Şekilli harfler nedir, nasıl kullanılır? A'dan Z'ye tüm stiller, platform rehberi ve PUBG, Instagram, WhatsApp ipuçları.",
+      "headline": "Şekilli Harfler: A'dan Z'ye Dekoratif Harf Oluşturucu | YazıStilleriPro",
+      "description": "Şekilli harfler oluşturucu ile tüm alfabeyi dekoratif stile dönüştürün. A'dan Z'ye her harfi kopyala-yapıştır ile Instagram, PUBG ve Discord için kullanın.",
       "inLanguage": "tr"
     },
     {
@@ -65,6 +67,16 @@ export default function FancyLettersPage() {
 
   return (
     <main className="flex-1 flex flex-col font-sans">
+      <Breadcrumbs items={[
+        { name: "Ana Sayfa", item: "/" },
+        { name: "Şekilli Yazı", item: "/sekilli-yazi" },
+        { name: "Şekilli Harfler", item: "/sekilli-yazi/sekilli-harfler" }
+      ]} />
+      <ToolSchema 
+        name="Şekilli Harfler Oluşturucu"
+        description="Şekilli harfler oluşturucu ile tüm alfabeyi dekoratif stile dönüştürün. A'dan Z'ye her harfi kopyala-yapıştır ile Instagram, PUBG ve Discord için kullanın."
+        url="/sekilli-yazi/sekilli-harfler"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

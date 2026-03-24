@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "../layout/Container";
 import { FAQSection } from "../shared/FAQSection";
 
@@ -21,7 +22,7 @@ export const HomeArticle = () => {
                                     Birçok kişi sosyal medya profillerini daha benzersiz göstermek ister. Ancak bio ya da kullanıcı adı yazdıklarında metin genellikle düz ve sıkıcı görünür. Ben de bir arkadaşımın Instagram profilini düzenlerken aynı sorunla karşılaştım. İsim normal görünüyordu ve hiç dikkat çekmiyordu.
                                 </p>
                                 <p>
-                                    Farklı araçları denedikten sonra yazı stilleri, yani stil sahibi metin stillerini keşfettim. Bu stiller normal metni yaratıcı karakterlere dönüştürür. Bugün milyonlarca insan Instagram bio, WhatsApp isimleri, Discord kullanıcı adları ve oyun nickleri için bu yazı stillerini kullanıyor.
+                                    Farklı araçları denedikten sonra yazı stilleri ve <Link href="/sekilli-yazi"><strong>şekilli yazı</strong></Link> (stil sahibi metin) stillerini keşfettim. Bu stiller normal metni yaratıcı karakterlere dönüştürür. Bugün milyonlarca insan Instagram bio, WhatsApp isimleri, Discord kullanıcı adları ve oyun nickleri için bu yazı stillerini kullanıyor.
                                 </p>
 
                                 <h2>Yazı Stilleri Aracımız Nasıl Kullanılır</h2>

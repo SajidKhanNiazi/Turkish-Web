@@ -39,7 +39,7 @@ export const InstagramFullArticle = () => {
                                 Instagram&apos;da milyonlarca profil var — ve hepsi aynı fontu kullanıyor. Sıradan bir biyografi, ziyaretçilerin gözünde hiç iz bırakmadan geçip gidiyor. Bu durum özellikle içerik üreticileri, markalar ve dikkat çekmek isteyen her kullanıcı için ciddi bir görünürlük sorunu yaratıyor.
                            </p>
                            <p className="text-lg text-pink-200 font-medium relative z-10">
-                                Neyse ki <strong>Instagram şekilli yazı</strong>, bu sorunu saniyeler içinde çözüyor. Herhangi bir uygulama yüklemeden, üyelik olmadan, tamamen ücretsiz olarak biyografinizi, gönderi açıklamalarınızı ve hikaye başlıklarınızı onlarca farklı stile dönüştürebilirsiniz.
+                                Neyse ki <Link href="/sekilli-yazi/instagram-sekilli-yazi"><strong>instagram şekilli yazı</strong></Link>, bu sorunu saniyeler içinde çözüyor. Herhangi bir uygulama yüklemeden, üyelik olmadan, tamamen ücretsiz olarak biyografinizi, gönderi açıklamalarınızı ve hikaye başlıklarınızı onlarca farklı stile dönüştürebilirsiniz.
                            </p>
                         </div>
 
@@ -108,7 +108,7 @@ export const InstagramFullArticle = () => {
                         </div>
 
                         <h2>Instagram İçin En İyi Şekilli Yazı Stilleri</h2>
-                        <p>Instagram&apos;da yüzlerce <Link href="/"><strong>Şekilli Yazı</strong></Link> stili kullanılabilir. Aşağıda en popüler stiller yer almaktadır.</p>
+                        <p>Instagram&apos;da yüzlerce <Link href="/"><strong>yazı stilleri</strong></Link> seçeneği kullanılabilir. Aşağıda en popüler stiller yer almaktadır.</p>
 
                         <div className="not-prose grid grid-cols-2 md:grid-cols-4 gap-4 my-12">
                             {[

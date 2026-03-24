@@ -30,13 +30,13 @@ export const SekilliIsimYazmaArticle = () => {
                                 İsminizi sosyal medyada veya oyunlarda yazıyorsunuz. Ama sıradan bir yazı tipiyle kimse sizi fark etmiyor. Herkes aynı standart harfleri kullanıyor ve kalabalıkta kaybolup gidiyorsunuz. Bu durum hem Instagram biyografilerinde hem de PUBG lobisinde ciddi bir görünürlük sorunu yaratıyor.
                            </p>
                            <p className="text-lg text-indigo-200 font-medium relative z-10">
-                                Neyse ki <strong>şekilli isim yazma</strong> tam da bu sorunu çözüyor. Ahmet, Ayşe, Zeynep veya Burak — hangi isim olursa olsun, dakikalar içinde onlarca farklı şekilli stile dönüştürebilirsiniz. Bu rehberde şekilli isim yazmanın nasıl çalıştığını, hangi stillerin hangi platformlara uyduğunu ve Türkçe karakterler için nelere dikkat etmeniz gerektiğini adım adım anlatıyorum.
+                                Neyse ki <strong>isim yazma</strong> ve <strong>şekilli isim yazma</strong> tam da bu sorunu çözüyor. Ahmet, Ayşe, Zeynep veya Burak — hangi isim olursa olsun, dakikalar içinde onlarca farklı şekilli stile dönüştürebilirsiniz. Bu rehberde şekilli isim yazmanın nasıl çalıştığını, hangi stillerin hangi platformlara uyduğunu ve Türkçe karakterler için nelere dikkat etmeniz gerektiğini adım adım anlatıyorum.
                            </p>
                         </div>
 
                         <h2>Şekilli İsim Nedir?</h2>
                         <p>
-                            <strong>Şekilli isim</strong>, normal harfler yerine özel Unicode karakterler ve <Link href="/sekilli-yazi"><strong>Şekilli Yazı</strong></Link> stilleri kullanılarak oluşturulan kişiselleştirilmiş isim yazımıdır. Örneğin standart &quot;Ayşe&quot; ismi yerine <strong>𝒜𝓎𝓈ℯ</strong> veya <strong>『Ayşe』</strong> gibi görsel açıdan dikkat çekici bir isim oluşturabilirsiniz.
+                            <strong>Şekilli isim</strong>, normal harfler yerine özel Unicode karakterler ve <Link href="/sekilli-yazi"><strong>şekilli yazı</strong></Link> stilleri kullanılarak oluşturulan kişiselleştirilmiş isim yazımıdır. Örneğin standart &quot;Ayşe&quot; ismi yerine <strong>𝒜𝓎𝓈ℯ</strong> veya <strong>『Ayşe』</strong> gibi görsel açıdan dikkat çekici bir isim oluşturabilirsiniz.
                         </p>
                         <p>
                             Öte yandan şekilli isimler gerçek anlamda bir &quot;font&quot; değildir. Bunlar, bilgisayar sistemlerinin ve tüm modern cihazların zaten tanıdığı Unicode karakterlerinden oluşur. Bu nedenle herhangi bir uygulama yüklemeye gerek yoktur. Kopyala-yapıştır yöntemiyle her platformda anında kullanabilirsiniz.

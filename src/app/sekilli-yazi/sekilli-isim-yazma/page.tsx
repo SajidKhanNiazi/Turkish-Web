@@ -4,11 +4,13 @@ import { NameToolSection } from "@/components/generator/NameToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { SekilliIsimYazmaArticle } from "@/components/content/SekilliIsimYazmaArticle";
 import { silo2Categories } from "@/data/categories";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: `Şekilli İsim Yazma: Türkçe İsimler İçin Stil Rehberi (2026) | ${siteConfig.name}`,
+  title: "Şekilli İsim Yazma: Adını Güzel Stillerle Yaz ve Kopyala | YazıStilleriPro",
   description:
-    "Şekilli isim yazma nasıl yapılır? Ahmet, Ayşe, Zeynep gibi Türkçe isimler için en güzel şekilli yazı stilleri, platform rehberi ve adım adım kullanım kılavuzu.",
+    "Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Şekilli isim kopyala-yapıştır — Instagram, WhatsApp ve PUBG için anında kullan.",
   alternates: {
     canonical: "/sekilli-yazi/sekilli-isim-yazma"
   }
@@ -19,8 +21,8 @@ export default function FancyNamePage() {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Şekilli İsim Yazma: Türkçe İsimler İçin Stil Rehberi (2026)",
-      "description": "Şekilli isim yazma nasıl yapılır? Türkçe isimler için en güzel şekilli yazı stilleri, platform rehberi ve adım adım kullanım kılavuzu.",
+      "headline": "Şekilli İsim Yazma: Adını Güzel Stillerle Yaz ve Kopyala | YazıStilleriPro",
+      "description": "Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Şekilli isim kopyala-yapıştır — Instagram, WhatsApp ve PUBG için anında kullan.",
       "inLanguage": "tr"
     },
     {
@@ -65,6 +67,16 @@ export default function FancyNamePage() {
 
   return (
     <main className="flex-1 flex flex-col font-sans">
+      <Breadcrumbs items={[
+        { name: "Ana Sayfa", item: "/" },
+        { name: "Şekilli Yazı", item: "/sekilli-yazi" },
+        { name: "Şekilli İsim Yazma", item: "/sekilli-yazi/sekilli-isim-yazma" }
+      ]} />
+      <ToolSchema 
+        name="Şekilli İsim Yazma Aracı"
+        description="Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Şekilli isim kopyala-yapıştır — Instagram, WhatsApp ve PUBG için anında kullan."
+        url="/sekilli-yazi/sekilli-isim-yazma"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
