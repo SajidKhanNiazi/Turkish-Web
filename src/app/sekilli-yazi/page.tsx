@@ -28,7 +28,7 @@ export default function PillarSekilliYaziPage() {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Şekilli Yazı Oluşturucu",
-      "url": "https://lightpink-viper-961727.hostingersite.com/sekilli-yazi",
+      "url": `${siteConfig.url}/sekilli-yazi`,
       "description": "Şekilli yazı oluşturucu ile 50+ farklı stile dönüştürün.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",

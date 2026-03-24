@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site";
 
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { HomeArticle } from "@/components/home/HomeArticle";
@@ -18,7 +19,7 @@ const HomePage = () => {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Yazı Stilleri Oluşturucu",
-    "url": "https://lightpink-viper-961727.hostingersite.com/",
+    "url": `${siteConfig.url}/`,
     "description": "Metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Instagram, PUBG ve WhatsApp için ücretsiz.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Web",

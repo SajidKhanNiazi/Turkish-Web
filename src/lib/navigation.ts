@@ -15,7 +15,7 @@ export const silo1Links: NavItem[] = [
 ];
 
 export const silo2Links: NavItem[] = [
-  { href: "/sekilli-yazi", label: "Şekilli Yazı Hub" },
+  { href: "/sekilli-yazi", label: "Şekilli Yazı" },
   { href: "/sekilli-yazi/sekilli-harfler", label: "Şekilli Harfler" },
   { href: "/sekilli-yazi/sekilli-isim-yazma", label: "Şekilli İsim Yazma" },
   { href: "/sekilli-yazi/instagram-sekilli-yazi", label: "Instagram Yazısı" },

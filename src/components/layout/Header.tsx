@@ -11,7 +11,7 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0B0F1A]/85 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20 transition-all">
+    <header className="sticky top-0 z-50 w-full bg-[#0B0F1A] border-b border-white/[0.06] shadow-lg shadow-black/20 transition-all">
       <Container className="flex items-center justify-between py-4">
         {/* Logo Area */}
         <div className="flex items-center gap-3">
@@ -68,41 +68,45 @@ export const Header = () => {
 
       {/* Mobile Nav Overlay */}
       {open ? (
-        <div className="absolute top-[76px] left-0 w-full border-b border-white/[0.06] bg-[#0B0F1A]/95 backdrop-blur-2xl xl:hidden shadow-2xl shadow-black/40">
-          <Container className="flex flex-col gap-2 py-6 px-4">
+        <div className="absolute top-[76px] left-0 w-full z-50 xl:hidden bg-[#0B0F1A] border-b border-indigo-500/20 shadow-2xl">
+          <Container className="flex flex-col gap-1 py-8 px-4">
             <Link
               href="/"
-              className={`flex items-center gap-3 rounded-2xl px-5 py-4 text-sm font-bold transition-all ${pathname === "/"
+              className={`flex items-center gap-4 rounded-xl px-5 py-4 text-base font-bold transition-all ${pathname === "/"
                 ? "bg-white/[0.08] text-white"
-                : "text-gray-400 hover:bg-white/[0.04] hover:text-gray-200"
+                : "text-gray-400 hover:bg-white/[0.04] hover:text-white"
                 }`}
               onClick={() => setOpen(false)}
             >
-              <span className="w-2 h-2 rounded-full bg-indigo-400" />
+              <div className={`w-2 h-2 rounded-full ${pathname === "/" ? 'bg-indigo-400' : 'bg-gray-700'}`} />
               Ana Sayfa
             </Link>
             
-            <div className="my-2 h-px w-full bg-white/[0.06]" />
-            <h3 className="px-5 text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Şekilli Yazı Araçları</h3>
+            <div className="my-4 px-5 flex items-center gap-3">
+              <h3 className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Şekilli Yazı Araçları</h3>
+              <div className="h-px flex-1 bg-white/5" />
+            </div>
             
-            {silo2Links.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`flex items-center gap-3 rounded-2xl px-5 py-4 text-sm font-bold transition-all ${
-                    isActive
-                      ? "bg-indigo-500/10 text-indigo-400"
-                      : "text-gray-400 hover:bg-white/[0.04] hover:text-gray-200"
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-indigo-400' : 'bg-gray-600'}`} />
-                  {item.label}
-                </Link>
-              );
-            })}
+            <div className="grid gap-1">
+              {silo2Links.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`flex items-center gap-4 rounded-xl px-5 py-4 text-sm font-bold transition-all ${
+                      isActive
+                        ? "bg-white/[0.08] text-indigo-400"
+                        : "text-gray-400 hover:bg-white/[0.04] hover:text-gray-200"
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    <div className={`w-2 h-2 rounded-full ${isActive ? 'bg-indigo-400' : 'bg-gray-700'}`} />
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
           </Container>
         </div>
       ) : null}

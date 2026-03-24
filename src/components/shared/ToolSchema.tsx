@@ -1,5 +1,7 @@
 "use client";
 
+import { siteConfig } from "@/lib/site";
+
 interface ToolSchemaProps {
     name: string;
     description: string;
@@ -7,7 +9,7 @@ interface ToolSchemaProps {
 }
 
 export const ToolSchema = ({ name, description, url }: ToolSchemaProps) => {
-    const baseUrl = "https://lightpink-viper-961727.hostingersite.com";
+    const baseUrl = siteConfig.url;
     const fullUrl = url.startsWith("http") ? url : `${baseUrl}${url.startsWith("/") ? "" : "/"}${url}`;
 
     const jsonLd = {

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Container } from "../layout/Container";
+import { siteConfig } from "@/lib/site";
 
 interface BreadcrumbItem {
     name: string;
@@ -13,7 +14,7 @@ interface BreadcrumbsProps {
 }
 
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
-    const baseUrl = "https://lightpink-viper-961727.hostingersite.com";
+    const baseUrl = siteConfig.url;
 
     const jsonLd = {
         "@context": "https://schema.org",

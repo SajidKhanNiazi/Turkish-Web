@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Yazı Stilleri Pro",
   shortName: "TurkishWeb",
-  url: "http://localhost:3000",
+  url: "https://yazistilleripro.com.tr",
   description:
     "Şık, havalı ve dekoratif yazı stilleri oluşturun. Metninizi girin, farklı stilleri anında görün ve tek tıkla kopyalayın."
 };
