@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { InstagramToolSection } from "@/components/generator/InstagramToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
+import { InstagramSekilliYaziArticle } from "@/components/content/InstagramSekilliYaziArticle";
+import { silo2Categories } from "@/data/categories";
 
 export const metadata: Metadata = {
-  title: `Instagram Şekilli Yazı ve Bio Fontları | ${siteConfig.name}`,
+  title: `Instagram Şekilli Yazı (Kopyala Yapıştır + Türkçe Destek) | ${siteConfig.name}`,
   description:
-    "Instagram bio ve yorumları için uyumlu şekilli yazı fontları oluşturun. Zalgo ve bozuk fontlar içermez, garantili kopyala yapıştır araçları.",
+    "Instagram şekilli yazı ile profilini öne çıkar. Biyografi, gönderi ve DM için 40+ stil. Türkçe karakter destekli. Ücretsiz ve güvenli.",
   alternates: {
     canonical: "/sekilli-yazi/instagram-sekilli-yazi"
   }
@@ -35,7 +37,9 @@ export default function InstagramFontsPage() {
         <InstagramToolSection />
       </div>
 
-      <ExploreMoreTools />
+      <InstagramSekilliYaziArticle />
+
+      <ExploreMoreTools tools={silo2Categories} />
     </main>
   );
 }

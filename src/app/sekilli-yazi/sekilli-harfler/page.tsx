@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 import { LettersToolSection } from "@/components/generator/LettersToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { SekilliHarflerArticle } from "@/components/content/SekilliHarflerArticle";
+import { silo2Categories } from "@/data/categories";
 
 export const metadata: Metadata = {
   title: "Şekilli Harfler Nedir? A'dan Z'ye Değişik Harf Rehberi (2026)",
@@ -91,7 +92,7 @@ export default function FancyLettersPage() {
 
       <SekilliHarflerArticle />
 
-      <ExploreMoreTools />
+      <ExploreMoreTools tools={silo2Categories} />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { generateEmojiStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
@@ -9,6 +9,11 @@ type TabType = 'emoji' | 'kaomoji';
 export const EmojiToolSection = () => {
   const [value, setValue] = useState("Harika");
   const [activeTab, setActiveTab] = useState<TabType>('emoji');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const allStyles = generateEmojiStyles(value || "Harika");
   
@@ -78,7 +83,8 @@ export const EmojiToolSection = () => {
       </div>
 
       {/* Style Results */}
-      <div className="grid gap-4 mt-0">
+      {mounted && (
+        <div className="grid gap-4 mt-0">
         {currentStyles.length > 0 ? currentStyles.map((style, index) => (
           <StyleResultItem
             key={style.id}
@@ -91,7 +97,8 @@ export const EmojiToolSection = () => {
                 Şu an sonuç bulunamadı. Lütfen kelime girin.
             </div>
         )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

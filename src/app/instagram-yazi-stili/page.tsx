@@ -1,22 +1,76 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
+import { InstagramFullArticle } from "@/components/content/InstagramFullArticle";
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
-import { InstagramArticle } from "@/components/generator/InstagramArticle";
 
 export const metadata: Metadata = {
-  title: "Instagram Yazı Stili (Şekilli Yazı) – Instagram Bio İçin Şık Yazılar",
+  title: "Instagram Şekilli Yazı: Biyografi, Gönderi ve Hikaye Rehberi (2026)",
   description:
-    "Instagram yazı stili oluşturun. Biyografi, kullanıcı adı ve yorumlar için şekilli yazıları kolayca kopyalayın. En popüler Instagram yazı stillerini keşfedin.",
+    "Instagram şekilli yazı nasıl yapılır? Biyografi, gönderi ve hikaye için adım adım rehber. Türkçe karakter desteği, 150 karakter sınırı ipuçları ve en iyi stil önerileri.",
   alternates: {
     canonical: "/instagram-yazi-stili"
   }
 };
 
 const InstagramTextPage = () => {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Instagram Şekilli Yazı: Biyografi, Gönderi ve Hikaye Rehberi (2026)",
+      "description": "Instagram şekilli yazı nasıl yapılır? Biyografi, gönderi ve hikaye için adım adım rehber. Türkçe karakter desteği ve 150 karakter sınırı ipuçları.",
+      "inLanguage": "tr"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Instagram şekilli yazı neden çalışıyor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instagram şekilli yazı, Unicode karakter standardı sayesinde çalışır. Normal harflerin Unicode sisteminde onlarca görsel versiyonu vardır. Bu karakterler font dosyası değil, evrensel metin karakterleridir. Bu yüzden Instagram ve diğer tüm platformlar bu yazıları sorunsuz görüntüler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Instagram biyografisinde kaç karakter kullanılabilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instagram biyografisi 150 karakterle sınırlıdır. Profil adı alanı ise yalnızca 30 karakterdir. Şekilli yazı karakterleri Unicode tabanlı olduğu için standart harflerden daha fazla byte kaplayabilir. Bu nedenle şekilli yazıyı biyografiye eklemeden önce karakter sayısını kontrol etmeniz önerilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Instagram'da Türkçe şekilli yazı çalışıyor mu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet, Türkçe karakter desteği sunan araçlarda Ğ, Ş, Ü, İ, Ö ve Ç harfleri eksiksiz dönüştürülür. Türkçe desteği olmayan araçlarda bu harfler bozuk görünebilir. Bu nedenle Türkçe optimizasyonlu bir araç kullanmanız önemlidir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Instagram biyografi yazı tipi uygulama içinden değiştirilebilir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. Instagram'ın yazı tipi değiştirme butonu yalnızca Hikayeler ve Reels için geçerlidir. Biyografi veya profil adı alanında yerleşik bir font seçeneği bulunmaz. Biyografi için şekilli yazı kullanmak istiyorsanız Unicode tabanlı bir şekilli yazı aracı kullanmanız ve metni kopyala-yapıştır yöntemiyle eklemeniz gerekir."
+          }
+        }
+      ]
+    }
+  ];
+
   return (
     <>
       <main className="flex-1 flex flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <HeroGeneratorSection 
+            titleTag="div"
+            titleClassName="max-w-4xl text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white"
             title={
               <>
                   Instagram için{" "}
@@ -30,7 +84,7 @@ const InstagramTextPage = () => {
             defaultPreviewText="Instagram Yazı Stili"
             listType="instagram"
         />
-        <InstagramArticle />
+        <InstagramFullArticle />
       </main>
     </>
   );

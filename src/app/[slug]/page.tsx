@@ -87,7 +87,7 @@ export default function SiloPage({ params }: PageProps) {
                 <div className="bg-slate-50/50">
                     <ContentSection title={`${category.title} Nedir?`}>
                         <p>
-                            ${category.title} aracı, standart metinlerinize anında daha yaratıcı ve estetik bir görünüm kazandırır. Özel Unicode sembolleri sayesinde WhatsApp, Instagram veya PUBG gibi platformlarda sorunsuz bir şekilde kopyalayıp kullanabilirsiniz.
+                            {category.title} aracı, standart metinlerinize anında daha yaratıcı ve estetik bir görünüm kazandırır. Özel Unicode sembolleri sayesinde WhatsApp, Instagram veya PUBG gibi platformlarda sorunsuz bir şekilde kopyalayıp kullanabilirsiniz.
                         </p>
                     </ContentSection>
                 </div>

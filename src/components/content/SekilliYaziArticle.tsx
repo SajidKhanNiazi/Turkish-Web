@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Container } from "../layout/Container";
 import { ChevronDown, Info, AlertTriangle, Lightbulb, CheckCircle2, Quote } from "lucide-react";

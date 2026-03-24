@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { generateLetterStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
@@ -46,6 +46,11 @@ const LetterSquareButton = ({ character }: { character: string }) => {
 
 export const LettersToolSection = () => {
     const [word, setWord] = useState("Harf");
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
     
     // Evaluate word generator
     const wordStyles = generateLetterStyles(word || "Harf");
@@ -96,43 +101,44 @@ export const LettersToolSection = () => {
             </div>
 
             {/* 2. Giant A-Z Alphabet Grids */}
-            <div className="flex flex-col gap-16 border-t border-white/[0.06] pt-16">
-                <div className="text-center sm:text-left">
-                    <div className="text-2xl sm:text-3xl font-bold text-white px-2 tracking-tight font-display mb-3">
-                        A&apos;dan Z&apos;ye Şekilli Harfler
+            {mounted && (
+                <div className="flex flex-col gap-16 border-t border-white/[0.06] pt-16">
+                    <div className="text-center sm:text-left">
+                        <div className="text-2xl sm:text-3xl font-bold text-white px-2 tracking-tight font-display mb-3">
+                            A&apos;dan Z&apos;ye Şekilli Harfler
+                        </div>
+                        <p className="text-gray-400 px-2 font-medium text-lg">Aşağıdaki dev harf tablolarından beğendiğiniz harfin üzerine tıklayarak anında kopyalayabilirsiniz.</p>
                     </div>
-                    <p className="text-gray-400 px-2 font-medium text-lg">Aşağıdaki dev harf tablolarından beğendiğiniz harfin üzerine tıklayarak anında kopyalayabilirsiniz.</p>
-                </div>
 
-                <div className="flex flex-col gap-12">
-                    {baseStyles.map((styleDef) => {
-                        const styleLabel = styleDef.label;
-                        return (
-                            <div key={styleDef.id} className="flex flex-col gap-6 bg-[#111827]/40 p-4 sm:p-8 rounded-3xl border border-white/[0.04]">
-                                <div className="text-lg sm:text-xl font-bold text-white tracking-tight border-l-4 border-indigo-500 pl-4">
-                                    {styleLabel} Harfler
+                    <div className="flex flex-col gap-12">
+                        {baseStyles.map((styleDef) => {
+                            const styleLabel = styleDef.label;
+                            return (
+                                <div key={styleDef.id} className="flex flex-col gap-6 bg-[#111827]/40 p-4 sm:p-8 rounded-3xl border border-white/[0.04]">
+                                    <div className="text-lg sm:text-xl font-bold text-white tracking-tight border-l-4 border-indigo-500 pl-4">
+                                        {styleLabel} Harfler
+                                    </div>
+                                    {/* 13 columns on ultra wide, 9 on desktop, 6/7 on tablet, 5 on mobile */}
+                                    <div className="grid grid-cols-5 min-[480px]:grid-cols-6 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-13 gap-2 sm:gap-3">
+                                        {ALPHABET.map((letter) => {
+                                            // Find the exact computed letter style
+                                            const exactStyle = generateLetterStyles(letter).find(s => s.id === styleDef.id);
+                                            const previewChar = exactStyle ? exactStyle.preview : letter;
+
+                                            return (
+                                                <LetterSquareButton 
+                                                    key={`${styleDef.id}-${letter}`} 
+                                                    character={previewChar} 
+                                                />
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                                {/* 13 columns on ultra wide, 9 on desktop, 6/7 on tablet, 5 on mobile */}
-                                <div className="grid grid-cols-5 min-[480px]:grid-cols-6 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-13 gap-2 sm:gap-3">
-                                    {ALPHABET.map((letter) => {
-                                        // Find the exact computed letter style
-                                        const exactStyle = generateLetterStyles(letter).find(s => s.id === styleDef.id);
-                                        const previewChar = exactStyle ? exactStyle.preview : letter;
-
-                                        return (
-                                            <LetterSquareButton 
-                                                key={`${styleDef.id}-${letter}`} 
-                                                character={previewChar} 
-                                            />
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
                 </div>
-            </div>
-
+            )}
         </div>
     );
 };

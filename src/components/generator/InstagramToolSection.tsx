@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { generateInstagramSafeStyles, transformTextWithStyle } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
 export const InstagramToolSection = () => {
   const [value, setValue] = useState("Profilinizi güzelleştirin");
   const [selectedPreviewStyle, setSelectedPreviewStyle] = useState("bold"); // Default preview style index conceptually
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const styles = generateInstagramSafeStyles(value || "Profilinizi güzelleştirin");
 
@@ -60,27 +65,29 @@ export const InstagramToolSection = () => {
         </div>
 
         {/* Style Results */}
-        <div className="grid gap-4 mt-2">
-          {styles.map((style, index) => {
-            // Extract the original style mapping ID
-            const originalStyleId = style.id.replace('ig-safe-', '');
+        {mounted && (
+          <div className="grid gap-4 mt-2">
+            {styles.map((style, index) => {
+              // Extract the original style mapping ID
+              const originalStyleId = style.id.replace('ig-safe-', '');
 
-            return (
-            <div 
-              key={style.id} 
-              onMouseEnter={() => setSelectedPreviewStyle(originalStyleId)}
-              onTouchStart={() => setSelectedPreviewStyle(originalStyleId)}
-              className="group cursor-pointer"
-            >
-              <StyleResultItem
-                index={index}
-                label={style.label}
-                value={style.preview}
-              />
-            </div>
-            );
-          })}
-        </div>
+              return (
+              <div 
+                key={style.id} 
+                onMouseEnter={() => setSelectedPreviewStyle(originalStyleId)}
+                onTouchStart={() => setSelectedPreviewStyle(originalStyleId)}
+                className="group cursor-pointer"
+              >
+                <StyleResultItem
+                  index={index}
+                  label={style.label}
+                  value={style.preview}
+                />
+              </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Right Column: Mobile Preview (Sticky on Desktop) */}

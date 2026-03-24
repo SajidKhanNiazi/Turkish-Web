@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "../layout/Container";
 import { ChevronDown } from "lucide-react";
 

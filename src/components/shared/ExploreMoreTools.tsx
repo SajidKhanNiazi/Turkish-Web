@@ -2,7 +2,9 @@
 
 import { CategoryCard } from "./CategoryCard";
 
-const RELEVANT_TOOLS = [
+import { Category } from "@/data/categories";
+
+const RELEVANT_TOOLS: Category[] = [
   {
     slug: "sekilli-yazi",
     href: "/",
@@ -29,7 +31,11 @@ const RELEVANT_TOOLS = [
   }
 ];
 
-export const ExploreMoreTools = () => {
+interface ExploreMoreToolsProps {
+  tools?: Category[];
+}
+
+export const ExploreMoreTools = ({ tools = RELEVANT_TOOLS }: ExploreMoreToolsProps) => {
   return (
     <section className="bg-[#0B0F1A] py-16 px-4 md:px-8 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
@@ -43,7 +49,7 @@ export const ExploreMoreTools = () => {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {RELEVANT_TOOLS.map((tool) => (
+          {tools.map((tool) => (
             <CategoryCard key={tool.slug} category={tool} />
           ))}
         </div>

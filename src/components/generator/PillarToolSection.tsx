@@ -1,11 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { generateAllStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
 export const PillarToolSection = () => {
     const [text, setText] = useState("Şekilli Yazı");
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
     
     // Generate all global styles
     const allStyles = generateAllStyles(text || "Şekilli Yazı");
@@ -50,7 +55,8 @@ export const PillarToolSection = () => {
             </div>
 
             {/* Render grouped styles */}
-            <div className="flex flex-col gap-16 mt-4">
+            {mounted && (
+                <div className="flex flex-col gap-16 mt-4">
                 {Object.entries(groupedStyles).map(([category, styles]) => (
                     <div key={category} className="flex flex-col gap-6">
                         <div className="flex items-center gap-4">
@@ -71,7 +77,8 @@ export const PillarToolSection = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+                </div>
+            )}
         </div>
     );
 };

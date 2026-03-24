@@ -14,7 +14,6 @@ import { FloatingParticles } from "./FloatingParticles";
 const EXAMPLE_TEXT = "İsmimi havalı yazı stilleriyle güzelleştir";
 
 export type GeneratorListType = 'bold' | 'italic' | 'aesthetic' | 'fontChanger' | 'instagram' | 'whatsapp' | 'default';
-
 interface HeroProps {
     title?: React.ReactNode;
     titleTag?: 'h1' | 'h2' | 'div';
@@ -22,6 +21,7 @@ interface HeroProps {
     inputTitle?: string;
     defaultPreviewText?: string;
     listType?: GeneratorListType;
+    titleClassName?: string;
 }
 
 export const HeroGeneratorSection = ({ 
@@ -30,7 +30,8 @@ export const HeroGeneratorSection = ({
     description, 
     inputTitle, 
     defaultPreviewText,
-    listType = 'default'
+    listType = 'default',
+    titleClassName
 }: HeroProps = {}) => {
     const [value, setValue] = useState("");
     const [mounted, setMounted] = useState(false);
@@ -54,7 +55,7 @@ export const HeroGeneratorSection = ({
                 <span className="mb-6 inline-flex rounded-full border border-indigo-400/20 bg-indigo-500/10 backdrop-blur-md px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-indigo-300">
                     Ücretsiz Şık Yazı Aracı
                 </span>
-                <TitleTag className="max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl leading-[1.1] text-white">
+                <TitleTag className={titleClassName || "max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl leading-[1.1] text-white"}>
                     {title || (
                         <>
                             İsminizi saniyeler içinde{" "}

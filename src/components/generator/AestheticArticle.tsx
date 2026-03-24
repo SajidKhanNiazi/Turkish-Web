@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "../layout/Container";
 import { Sparkles, CheckCircle2, ChevronDown } from "lucide-react";
 

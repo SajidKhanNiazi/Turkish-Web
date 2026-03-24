@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { generateNameStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
@@ -13,6 +13,11 @@ const SHUFFLE_ICON = (
 export const NameToolSection = () => {
   const [value, setValue] = useState("Sajid");
   const [shuffleSeed, setShuffleSeed] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const baseStyles = useMemo(() => generateNameStyles(value || "Sajid"), [value]);
 
@@ -76,8 +81,9 @@ export const NameToolSection = () => {
         </div>
       </div>
 
-      {/* Style Results */}
-      <div className="grid gap-4 mt-2">
+      {/* Styles Board */}
+      {mounted && (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {shuffledStyles.map((style, index) => (
           <StyleResultItem
             key={`${style.id}-${shuffleSeed}`} // Force re-render animation slightly if we want it by appending seed, but keeping it smooth without seed is better for performance.
@@ -86,7 +92,8 @@ export const NameToolSection = () => {
             value={style.preview}
           />
         ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

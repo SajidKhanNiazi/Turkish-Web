@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { EmojiToolSection } from "@/components/generator/EmojiToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
+import { SekilliEmojiYaziArticle } from "@/components/content/SekilliEmojiYaziArticle";
+import { silo2Categories } from "@/data/categories";
 
 export const metadata: Metadata = {
   title: `Şekilli Emoji Yazı Oluşturucu: Metne Sembol Ekle | ${siteConfig.name}`,
@@ -35,7 +37,9 @@ export default function EmojiFontsPage() {
         <EmojiToolSection />
       </div>
 
-      <ExploreMoreTools />
+      <SekilliEmojiYaziArticle />
+
+      <ExploreMoreTools tools={silo2Categories} />
     </main>
   );
 }

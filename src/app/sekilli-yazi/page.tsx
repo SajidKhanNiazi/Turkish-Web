@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { PillarToolSection } from "@/components/generator/PillarToolSection";
 import { SekilliYaziArticle } from "@/components/content/SekilliYaziArticle";
+import { silo2Categories } from "@/data/categories";
 
 export const metadata: Metadata = {
   title: "Şekilli Yazı Nedir? Yazı Stilleri, Türleri ve Kullanım Rehberi (2026)",
@@ -91,7 +92,7 @@ export default function PillarSekilliYaziPage() {
 
       <SekilliYaziArticle />
 
-      <ExploreMoreTools />
+      <ExploreMoreTools tools={silo2Categories} />
     </main>
   );
 }

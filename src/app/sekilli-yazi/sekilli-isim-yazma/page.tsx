@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site";
 import { NameToolSection } from "@/components/generator/NameToolSection";
 import { ExploreMoreTools } from "@/components/shared/ExploreMoreTools";
 import { SekilliIsimYazmaArticle } from "@/components/content/SekilliIsimYazmaArticle";
+import { silo2Categories } from "@/data/categories";
 
 export const metadata: Metadata = {
   title: `Şekilli İsim Yazma: Türkçe İsimler İçin Stil Rehberi (2026) | ${siteConfig.name}`,
@@ -91,7 +92,7 @@ export default function FancyNamePage() {
 
       <SekilliIsimYazmaArticle />
 
-      <ExploreMoreTools />
+      <ExploreMoreTools tools={silo2Categories} />
     </main>
   );
 }

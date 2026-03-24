@@ -1,3 +1,5 @@
+"use client";
+
 import { faqs } from "@/data/faqs";
 import { SectionHeading } from "./SectionHeading";
 import { ChevronDown, MessageCircleQuestion } from "lucide-react";
