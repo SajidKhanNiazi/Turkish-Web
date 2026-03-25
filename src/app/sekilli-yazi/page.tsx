@@ -7,7 +7,7 @@ import { silo2Categories } from "@/data/categories";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu (2026)",
+  title: "Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu",
   description:
     "Şekilli yazı oluşturucu ile metninizi 50+ farklı stile dönüştürün. Hiç uygulama indirmeden kopyala-yapıştır ile hemen kullanın.",
   alternates: {
@@ -20,7 +20,7 @@ export default function PillarSekilliYaziPage() {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu (2026)",
+      "headline": "Şekilli Yazı: Kopyala-Yapıştır Şekilli Metin Oluşturucu | YazıStilleriPro",
       "description": "Şekilli yazı oluşturucu ile metninizi 50+ farklı stile dönüştürün. Hiç uygulama indirmeden kopyala-yapıştır ile hemen kullanın.",
       "inLanguage": "tr"
     },

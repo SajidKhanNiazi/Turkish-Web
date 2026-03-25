@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Kalın Yazı Stili: Kopyala-Yapıştır Bold Yazı Oluşturucu | YazıStilleriPro",
+  title: "Kalın Yazı Stili: Kopyala-Yapıştır Bold Yazı Oluşturucu",
   description:
     "Kalın yazı stili oluşturucu ile Unicode bold yazılar oluşturun. Instagram biyografi, WhatsApp durum ve oyun nickleri için tek tıkla kopyala-yapıştır.",
   alternates: {
@@ -28,6 +28,7 @@ const BoldTextPage = () => {
           url="/kalin-yazi-stili"
         />
         <HeroGeneratorSection 
+            titleTag="div"
             title={
               <>
                   Kalın Yazı Stili <br className="hidden md:block" />

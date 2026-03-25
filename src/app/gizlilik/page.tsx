@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gizlilik Politikası | Yazı Stilleri Pro",
+  title: "Gizlilik Politikası",
   description: "Yazı Stilleri Pro gizlilik politikası ve veri kullanım detayları.",
 };
 

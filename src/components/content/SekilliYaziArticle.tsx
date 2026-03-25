@@ -30,7 +30,7 @@ export const SekilliYaziArticle = () => {
                                 Normal yazılar artık sosyal medyada dikkat çekmiyor. Herkesin aynı fontu kullandığı bir dünyada, sıradan bir metin gözden kaçıyor. Bu durum oyun nicklerinde, Instagram biyografilerinde ve WhatsApp mesajlarında ciddi bir sorun yaratıyor.
                            </p>
                            <p className="text-lg text-indigo-200 font-medium relative z-10">
-                                İşte tam bu noktada <Link href="/sekilli-yazi"><strong>sekilli yazi</strong></Link> devreye giriyor. Herhangi bir uygulama yüklemeden, tek bir araçla metinlerinizi onlarca farklı stile dönüştürebilirsiniz. Bu kılavuzda şekilli yazının ne olduğunu, nasıl çalıştığını ve her platformda nasıl kullanacağınızı adım adım açıklıyorum.
+                                İşte tam bu noktada <strong>sekilli yazi</strong> devreye giriyor. Herhangi bir uygulama yüklemeden, tek bir araçla metinlerinizi onlarca farklı stile dönüştürebilirsiniz. Bu kılavuzda şekilli yazının ne olduğunu, nasıl çalıştığını ve her platformda nasıl kullanacağınızı adım adım açıklıyorum.
                            </p>
                         </div>
 

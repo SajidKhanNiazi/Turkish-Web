@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Dekoratif Yazı Tipleri: Estetik ve Süslü Yazı Oluşturucu | YazıStilleriPro",
+  title: "Dekoratif Yazı Tipleri: Estetik ve Süslü Yazı Oluşturucu",
   description:
     "Dekoratif yazı tipleri oluşturucu ile estetik, süslü ve kıvrımlı yazılar oluşturun. Sosyal medya profilleri ve Instagram biyografisi için kopyala-yapıştır.",
   alternates: {

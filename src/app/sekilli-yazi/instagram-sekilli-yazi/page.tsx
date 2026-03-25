@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Instagram Şekilli Yazı: Bio ve Profil için Font Oluşturucu | YazıStilleriPro",
+  title: "Instagram Şekilli Yazı: Bio ve Profil için Font Oluşturucu",
   description:
     "Instagram şekilli yazı oluşturucu ile bio ve profilini özelleştir. Instagram biosuna şekilli yazı yazma rehberi — kopyala-yapıştır ile saniyeler içinde kullan.",
   alternates: {

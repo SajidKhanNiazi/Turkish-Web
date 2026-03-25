@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Şekilli Harfler: A'dan Z'ye Dekoratif Harf Oluşturucu | YazıStilleriPro",
+  title: "Şekilli Harfler: A'dan Z'ye Dekoratif Harf Oluşturucu",
   description:
     "Şekilli harfler oluşturucu ile tüm alfabeyi dekoratif stile dönüştürün. A'dan Z'ye her harfi kopyala-yapıştır ile Instagram, PUBG ve Discord için kullanın.",
   alternates: {

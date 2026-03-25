@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Yazı Stilleri Pro",
+  name: "YazıStilleriPro",
   shortName: "TurkishWeb",
   url: "https://yazistilleripro.com.tr",
   description:

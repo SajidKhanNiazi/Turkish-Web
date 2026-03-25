@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "İtalik Yazı: Kopyala-Yapıştır Eğik Yazı Oluşturucu | YazıStilleriPro",
+  title: "İtalik Yazı: Kopyala-Yapıştır Eğik Yazı Oluşturucu",
   description:
     "İtalik yazı oluşturucu ile metninizi eğik ve zarif yazı stillerine dönüştürün. Instagram, TikTok ve Discord için kopyala-yapıştır ile anında kullanın.",
   alternates: {

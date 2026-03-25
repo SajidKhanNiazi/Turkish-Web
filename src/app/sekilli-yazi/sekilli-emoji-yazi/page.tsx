@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Şekilli Emoji Yazı: Sembollü Yazı Oluşturucu ve Kopyala | YazıStilleriPro",
+  title: "Şekilli Emoji Yazı: Sembollü Yazı Oluşturucu ve Kopyala",
   description:
     "Şekilli emoji yazı oluşturucu ile sembollü ve emojili metinler oluşturun. Şekilli sayı yazma ve noktalarla emoji için kopyala-yapıştır aracı.",
   alternates: {

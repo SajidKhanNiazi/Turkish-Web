@@ -35,7 +35,7 @@ export const BoldArticle = () => {
                                 <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400">
                                     <Sparkles className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white">Kalın Yazı Örnekleri</h3>
+                                <div className="text-2xl font-bold text-white">Kalın Yazı Örnekleri</div>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {[

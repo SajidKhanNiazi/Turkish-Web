@@ -6,7 +6,7 @@ import { HomeArticle } from "@/components/home/HomeArticle";
 import { ExploreStyles } from "@/components/home/ExploreStyles";
 
 export const metadata: Metadata = {
-  title: "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala)",
+  title: "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala) | YazıStilleriPro",
   description:
     "Yazı stilleri oluşturucu ile metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Kopyala-yapıştır ile Instagram, PUBG ve WhatsApp için kullanın.",
   alternates: {
@@ -18,7 +18,7 @@ const HomePage = () => {
   const toolJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Yazı Stilleri Oluşturucu",
+    "name": "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala) | YazıStilleriPro",
     "url": `${siteConfig.url}/`,
     "description": "Metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Instagram, PUBG ve WhatsApp için ücretsiz.",
     "applicationCategory": "UtilitiesApplication",

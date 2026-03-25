@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Yazı Tipi Değiştirme: Online Ücretsiz Font Değiştirici | YazıStilleriPro",
+  title: "Yazı Tipi Değiştirme: Online Ücretsiz Font Değiştirici",
   description:
     "Yazı tipi değiştirme aracı ile metninizi 50+ farklı fonta dönüştürün. Ücretsiz online yazı tipi değiştirici — Instagram, WhatsApp için kopyala-yapıştır.",
   alternates: {

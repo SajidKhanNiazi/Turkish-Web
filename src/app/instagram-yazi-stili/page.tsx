@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Instagram Yazı Stili: Bio ve Profil Font Değiştirici | YazıStilleriPro",
+  title: "Instagram Yazı Stili: Bio ve Profil Font Değiştirici",
   description:
     "Instagram yazı stili değiştirici ile biyografi ve profilinizi özelleştirin. Instagram biyografi yazı tipi için kopyala-yapıştır — anında kullanın, uygulama yok.",
   alternates: {
@@ -71,7 +71,7 @@ const InstagramTextPage = () => {
           { name: "Instagram Yazı Stili", item: "/instagram-yazi-stili" }
         ]} />
         <ToolSchema 
-          name="Instagram Şekilli Yazı Oluşturucu"
+          name="Instagram Yazı Stili Değiştirici"
           description="Instagram bionuz, gönderi açıklamalarınız ve hikayeleriniz için en popüler Unicode fontlarını saniyeler içinde oluşturun."
           url="/instagram-yazi-stili"
         />

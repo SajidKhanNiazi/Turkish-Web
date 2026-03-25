@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "WhatsApp Kalın Yazma: Renkli ve Farklı Yazı Stilleri | YazıStilleriPro",
+  title: "WhatsApp Kalın Yazma: Renkli ve Farklı Yazı Stilleri",
   description:
     "WhatsApp kalın yazma, renkli yazma ve farklı yazı stilleri rehberi. WhatsApp durum ve mesajlarınızı özelleştirmek için kopyala-yapıştır yazı stilleri.",
   alternates: {

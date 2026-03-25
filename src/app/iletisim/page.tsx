@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "İletişim | Yazı Stilleri Pro",
+  title: "İletişim",
   description: "Yazı Stilleri Pro ile iletişime geçin. Soru, öneri ve reklam talepleriniz için bize ulaşın.",
 };
 

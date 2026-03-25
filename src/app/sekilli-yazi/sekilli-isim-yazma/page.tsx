@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
 
 export const metadata: Metadata = {
-  title: "Şekilli İsim Yazma: Adını Güzel Stillerle Yaz ve Kopyala | YazıStilleriPro",
+  title: "Şekilli İsim Yazma: Adını Güzel Stillerle Yaz ve Kopyala",
   description:
     "Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Şekilli isim kopyala-yapıştır — Instagram, WhatsApp ve PUBG için anında kullan.",
   alternates: {
