@@ -70,3 +70,37 @@ export const silo2Categories: Category[] = [
     description: "Mesajlarınızı eğlenceli emoji ve kaomojilerle daha estetik hale getirin."
   }
 ];
+
+/** Silo 3 — Nick / oyun odaklı araçlar (ayrı sütun URL yapısı). */
+export const silo3Categories: Category[] = [
+  {
+    slug: "sekilli-nick-yazma",
+    href: "/sekilli-nick-yazma",
+    title: "Şekilli Nick Yazma",
+    description: "300+ Unicode stil ile oyun ve sosyal medya nicklerini anında üretin."
+  },
+  {
+    slug: "havali-nick-yazma",
+    href: "/sekilli-nick-yazma/havali-nick-yazma",
+    title: "Havalı Nick Yazma",
+    description: "En havalı ve şık nicklerin anında oluşturulduğu mobil öncelikli araç."
+  },
+  {
+    slug: "kalin-ozel-stilli-nickler",
+    href: "/sekilli-nick-yazma/kalin-ozel-stilli-nickler",
+    title: "Kalın & Özel Nickler",
+    description: "Vurgulu kalın fontlar ve özel dekoratif stillerle benzersiz nickler üretin."
+  },
+  {
+    slug: "pubg-sekilli-nick",
+    href: "/sekilli-nick-yazma/pubg-sekilli-nick",
+    title: "PUBG Şekilli Nick",
+    description: "PUBG Mobile için havalı Unicode nick oluşturucu. 48+ stil, semboller ve uyumluluk kontrolü."
+  },
+  {
+    slug: "free-fire-nickleri",
+    href: "/sekilli-nick-yazma/free-fire-nickleri",
+    title: "Free Fire Nickleri",
+    description: "Free Fire için şekilli ve havalı nick oluşturucu. 50+ stil, semboller ve tek tıkla kopyalama."
+  }
+];

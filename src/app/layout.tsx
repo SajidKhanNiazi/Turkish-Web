@@ -41,9 +41,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       <body className={`${plusJakarta.variable} font-sans antialiased`} suppressHydrationWarning>
         <div className="flex min-h-screen flex-col bg-[#0B0F1A] text-[#F9FAFB] selection:bg-indigo-400/30 selection:text-white">
           <Header />
-          <main className="flex-1">
+          <div className="flex-1 min-w-0">
             {children}
-          </main>
+          </div>
           <Footer />
         </div>
       </body>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 
 const CopyIcon = () => (
   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -16,16 +16,19 @@ const CheckIcon = () => (
 
 type CopyButtonProps = {
   value: string;
+  onCopied?: () => void;
 };
 
-export const CopyButton = ({ value }: CopyButtonProps) => {
+export const CopyButton = ({ value, onCopied }: CopyButtonProps) => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async () => {
+  const handleCopy = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     if (!value) return;
     try {
       await navigator.clipboard.writeText(value);
       setCopied(true);
+      onCopied?.();
       window.setTimeout(() => setCopied(false), 1500);
     } catch {
       setCopied(false);

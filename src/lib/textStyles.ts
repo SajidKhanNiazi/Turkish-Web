@@ -109,6 +109,9 @@ const styleMaps: Record<string, Record<string, string>> = {
   negativeCircled: mergeMaps(buildMap(baseLatin, negativeCircledUpper), buildMap(baseLatinUpper, negativeCircledUpper)),
 };
 
+/** Stable list of Unicode font map keys for generators (e.g. nick tool). */
+export const UNICODE_FONT_STYLE_IDS = Object.keys(styleMaps);
+
 // --- Turkish Diacritics Support ---
 const turkishCombiningMarks: Record<string, { base: string; mark: string }> = {
   ç: { base: "c", mark: "\u0327" },

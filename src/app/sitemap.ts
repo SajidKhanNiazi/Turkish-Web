@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/site';
-import { silo1Categories, silo2Categories } from '@/data/categories';
+import { silo1Categories, silo2Categories, silo3Categories } from '@/data/categories';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -37,5 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...silo1Routes, ...silo2Routes];
+  const silo3Routes = silo3Categories.map((category) => ({
+    url: `${baseUrl}${category.href}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...silo1Routes, ...silo2Routes, ...silo3Routes];
 }

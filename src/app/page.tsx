@@ -32,7 +32,7 @@ const HomePage = () => {
   };
 
   return (
-    <>
+    <main className="flex-1 flex flex-col min-w-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
@@ -51,7 +51,7 @@ const HomePage = () => {
       />
       <HomeArticle />
       <ExploreStyles />
-    </>
+    </main>
   );
 };
 
