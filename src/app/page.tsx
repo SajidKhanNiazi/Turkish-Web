@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { HomeArticle } from "@/components/home/HomeArticle";
 import { ExploreStyles } from "@/components/home/ExploreStyles";
+import { FAQSchema } from "@/components/shared/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala) | YazıStilleriPro",
@@ -18,18 +19,33 @@ const HomePage = () => {
   const toolJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala) | YazıStilleriPro",
-    "url": `${siteConfig.url}/`,
-    "description": "Metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Instagram, PUBG ve WhatsApp için ücretsiz.",
+    "name": "Yazı Stilleri Oluşturucu",
+    "url": "https://yazistilleripro.com.tr/",
+    "description": "Yazı stilleri oluşturucu ile metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Kopyala-yapıştır ile Instagram, PUBG ve WhatsApp için kullanın.",
     "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Web",
+    "operatingSystem": "All",
+    "inLanguage": "tr",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "TRY"
-    },
-    "inLanguage": "tr"
+    }
   };
+
+  const homeFaqs = [
+    {
+      question: "Yazı stilleri oluşturucu ücretsiz mi?",
+      answer: "Evet, tüm yazı stilleri oluşturucu araçları tamamen ücretsizdir. Kayıt veya indirme gerekmez."
+    },
+    {
+      question: "Oluşturduğum yazıları Instagram'da kullanabilir miyim?",
+      answer: "Evet. Oluşturulan yazılar Unicode karakterleri kullandığından Instagram, WhatsApp, TikTok ve daha fazlasında sorunsuz çalışır."
+    },
+    {
+      question: "Türkçe karakterler destekleniyor mu?",
+      answer: "Evet. Ğ, Ü, Ş, İ, Ö, Ç gibi Türkçe karakterler tam olarak desteklenmektedir."
+    }
+  ];
 
   return (
     <main className="flex-1 flex flex-col min-w-0">
@@ -37,6 +53,7 @@ const HomePage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
       />
+      <FAQSchema faqs={homeFaqs} />
       <HeroGeneratorSection 
         title={
           <>
@@ -56,4 +73,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
 

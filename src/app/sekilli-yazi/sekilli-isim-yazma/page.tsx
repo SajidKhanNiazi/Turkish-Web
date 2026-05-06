@@ -6,6 +6,7 @@ import { SekilliIsimYazmaArticle } from "@/components/content/SekilliIsimYazmaAr
 import { silo2Categories } from "@/data/categories";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
+import { FAQSchema } from "@/components/shared/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Şekilli İsim Yazma: Adını Güzel Stillerle Yaz ve Kopyala",
@@ -16,55 +17,22 @@ export const metadata: Metadata = {
   }
 };
 
-export default function FancyNamePage() {
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Şekilli İsim Yazma: Adını Güzel Stillerle Yaz ve Kopyala | YazıStilleriPro",
-      "description": "Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Şekilli isim kopyala-yapıştır — Instagram, WhatsApp ve PUBG için anında kullan.",
-      "inLanguage": "tr"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Şekilli isim yazma ücretsiz mi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet. Şekilli isim oluşturucu araçların tamamına yakını tamamen ücretsizdir. Üyelik, kayıt veya uygulama indirmeye gerek yoktur. Tarayıcıdan doğrudan kullanabilirsiniz."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Türkçe isimler şekilli yazı aracında doğru çalışıyor mu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Türkçe karakter desteği sunan araçlarda evet. Ğ, Ş, Ü, İ, Ö, Ç harfleri içeren isimler bu araçlarda eksiksiz dönüştürülür. Türkçe desteği olmayan araçlarda ise bu harfler bozuk görünebilir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Şekilli isim yazma PUBG'de çalışıyor mu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet, ancak PUBG Mobile'da 14–16 karakter sınırı vardır. Karmaşık sembol zincirleri geçersiz karakter hatası verebilir. Kısa sembol + isim + kısa sembol formatını tercih etmeniz önerilir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Şekilli isim Instagram biyografisine nasıl eklenir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Şekilli isim aracından istediğiniz stili kopyalayın. Instagram uygulamasını açın, Profili Düzenle bölümüne gidin ve Ad ya da Biyografi alanına yapıştırın. Kaydet butonuna basmanız yeterlidir."
-          }
-        }
-      ]
-    }
-  ];
+const sekilliIsimFaqs = [
+  {
+    question: "PUBG için şekilli isim nasıl oluşturulur?",
+    answer: "Aracımıza isminizi yazın, bir stil seçin ve kopyalayın. PUBG Mobile'da profil adı bölümüne yapıştırın. Nick 14-16 karakteri geçmemesine dikkat edin."
+  },
+  {
+    question: "Şekilli isim Instagram'da kullanılabilir mi?",
+    answer: "Evet. Oluşturduğunuz şekilli ismi Instagram profilinizin ad alanına yapıştırabilirsiniz."
+  },
+  {
+    question: "Türkçe isimler doğru dönüştürülüyor mu?",
+    answer: "Evet. Ahmet, Ayşe, Zeynep gibi Türkçe karakterli isimler dahil tüm isimler doğru Unicode karşılıklarına dönüştürülür."
+  }
+];
 
+export default function FancyNamePage() {
   return (
     <main className="flex-1 flex flex-col font-sans">
       <Breadcrumbs items={[
@@ -74,13 +42,11 @@ export default function FancyNamePage() {
       ]} />
       <ToolSchema 
         name="Şekilli İsim Yazma Aracı"
-        description="Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Şekilli isim kopyala-yapıştır — Instagram, WhatsApp ve PUBG için anında kullan."
+        description="Şekilli isim yazma aracı ile adını dekoratif ve güzel stillerle oluştur. Instagram, WhatsApp ve PUBG için kopyala-yapıştır ile anında kullan."
         url="/sekilli-yazi/sekilli-isim-yazma"
+        type="SoftwareApplication"
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <FAQSchema faqs={sekilliIsimFaqs} />
       
       <section className="relative overflow-hidden bg-[#0B0F1A] pt-16 pb-16 sm:pt-28 border-b border-white/[0.06]">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950/20 via-[#0B0F1A] to-[#0B0F1A]" />
@@ -108,3 +74,4 @@ export default function FancyNamePage() {
     </main>
   );
 }
+

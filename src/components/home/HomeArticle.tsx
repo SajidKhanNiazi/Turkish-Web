@@ -127,7 +127,7 @@ export const HomeArticle = () => {
                                     Birçok farklı stil sahibi yazı türü vardır. Her stil metne farklı bir karakter kazandırır.
                                 </p>
 
-                                <h3>Kalın Yazı Stilleri</h3>
+                                <h3><Link href="/kalin-yazi-stili">Kalın Yazı Stilleri</Link></h3>
                                 <p>
                                     Kalın yazı stilleri güçlü ve dikkat çekici görünür.
                                 </p>
@@ -138,7 +138,7 @@ export const HomeArticle = () => {
                                     Bu stiller genellikle kullanıcı adları, kısa mesajlar ve sosyal medya bio için kullanılır.
                                 </p>
 
-                                <h3>İtalik Yazı Stilleri</h3>
+                                <h3><Link href="/italik-egik-yazi">İtalik Yazı Stilleri</Link></h3>
                                 <p>
                                     İtalik yazı daha zarif ve akıcı görünür.
                                 </p>
@@ -171,7 +171,7 @@ export const HomeArticle = () => {
                                     Oyuncular ve yaratıcı kullanıcılar bu stilleri benzersiz kullanıcı adları için tercih eder.
                                 </p>
 
-                                <h3>Bubble ve Dekoratif Yazı Stilleri</h3>
+                                <h3><Link href="/dekoratif-estetik-yazi-tipleri">Bubble ve Dekoratif Yazı Stilleri</Link></h3>
                                 <p>
                                     Bubble yazılar yuvarlak ve eğlenceli görünür.
                                 </p>

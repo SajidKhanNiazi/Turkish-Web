@@ -4,6 +4,7 @@ import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { BoldArticle } from "@/components/generator/BoldArticle";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
+import { FAQSchema } from "@/components/shared/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Kalın Yazı Stili: Kopyala-Yapıştır Bold Yazı Oluşturucu",
@@ -13,6 +14,21 @@ export const metadata: Metadata = {
     canonical: "/kalin-yazi-stili"
   }
 };
+
+const kalinFaqs = [
+  {
+    question: "Instagram'da yazı nasıl kalın yapılır?",
+    answer: "Instagram kendi kalın yazı özelliğini sunmaz. Aracımızla Unicode kalın metin oluşturup biyografinize yapıştırabilirsiniz."
+  },
+  {
+    question: "Kalın yazı WhatsApp'ta çalışır mı?",
+    answer: "Evet. Unicode kalın karakterler WhatsApp'ta sorunsuz görüntülenir. Ayrıca WhatsApp'ın kendi *metin* formatlamasını da kullanabilirsiniz."
+  },
+  {
+    question: "Kaç farklı kalın yazı stili var?",
+    answer: "Sans-Serif Bold, Serif Bold, Bold Italic ve Semboller dahil birden fazla kalın yazı stili mevcuttur."
+  }
+];
 
 const BoldTextPage = () => {
   return (
@@ -24,9 +40,11 @@ const BoldTextPage = () => {
         ]} />
         <ToolSchema 
           name="Kalın Yazı Stili Oluşturucu"
-          description="Kalın yazı stili oluşturucu ile Unicode bold yazılar oluşturun. Instagram, WhatsApp ve Discord için tek tıkla kopyalayın."
+          description="İsminizi veya mesajlarınızı kalın ve dikkat çekici Unicode fontlarına dönüştürün. Instagram, WhatsApp ve sosyal medya için tek tıkla kopyalayın."
           url="/kalin-yazi-stili"
+          type="SoftwareApplication"
         />
+        <FAQSchema faqs={kalinFaqs} />
         <HeroGeneratorSection 
             titleTag="div"
             title={
@@ -50,3 +68,4 @@ const BoldTextPage = () => {
 };
 
 export default BoldTextPage;
+

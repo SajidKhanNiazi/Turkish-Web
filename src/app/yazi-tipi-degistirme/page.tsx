@@ -4,6 +4,7 @@ import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { FontChangerArticle } from "@/components/generator/FontChangerArticle";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
+import { FAQSchema } from "@/components/shared/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Yazı Tipi Değiştirme: Online Ücretsiz Font Değiştirici",
@@ -14,6 +15,21 @@ export const metadata: Metadata = {
   }
 };
 
+const fontChangerFaqs = [
+  {
+    question: "Yazı tipi değiştirici nasıl çalışır?",
+    answer: "Araç, her harfi Unicode sistemindeki görsel karşılığıyla eşleştirir. Bu sayede font yüklemeden farklı görünümler elde edilir."
+  },
+  {
+    question: "Hangi platformlarda kullanılabilir?",
+    answer: "Instagram, TikTok, WhatsApp, Discord, Twitter/X, Facebook ve PUBG gibi oyunlarda kullanılabilir."
+  },
+  {
+    question: "Yazı tipi değiştirme ücretsiz mi?",
+    answer: "Evet, tamamen ücretsizdir. Üyelik veya ödeme gerekmez."
+  }
+];
+
 const FontChangerPage = () => {
   return (
     <>
@@ -23,10 +39,12 @@ const FontChangerPage = () => {
           { name: "Yazı Tipi Değiştirme", item: "/yazi-tipi-degistirme" }
         ]} />
         <ToolSchema 
-          name="Yazı Tipi Değiştirme Aracı"
-          description="Metninizi saniyeler içinde farklı yazı tiplerine dönüştürün. Sosyal medya ve oyunlar için online font değiştirici."
+          name="Online Yazı Tipi Değiştirici"
+          description="Normal metni Instagram, Discord, TikTok ve WhatsApp için şık Unicode yazı stillerine dönüştürün. Ücretsiz, anında, kurulum yok."
           url="/yazi-tipi-degistirme"
+          type="SoftwareApplication"
         />
+        <FAQSchema faqs={fontChangerFaqs} />
         <HeroGeneratorSection 
             title="Instantly convert your text to different fonts ."
             titleTag="div"
@@ -43,3 +61,4 @@ const FontChangerPage = () => {
 };
 
 export default FontChangerPage;
+

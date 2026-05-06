@@ -1,25 +1,24 @@
-"use client";
-
 import { siteConfig } from "@/lib/site";
 
 interface ToolSchemaProps {
     name: string;
     description: string;
     url: string;
+    type?: "WebApplication" | "SoftwareApplication";
 }
 
-export const ToolSchema = ({ name, description, url }: ToolSchemaProps) => {
+export const ToolSchema = ({ name, description, url, type = "WebApplication" }: ToolSchemaProps) => {
     const baseUrl = siteConfig.url;
     const fullUrl = url.startsWith("http") ? url : `${baseUrl}${url.startsWith("/") ? "" : "/"}${url}`;
 
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
+        "@type": type,
         "name": name,
         "url": fullUrl,
         "description": description,
         "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web",
+        "operatingSystem": "All",
         "offers": {
             "@type": "Offer",
             "price": "0",

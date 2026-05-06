@@ -4,6 +4,7 @@ import { HeroGeneratorSection } from "@/components/home/HeroGeneratorSection";
 import { ItalicArticle } from "@/components/generator/ItalicArticle";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { ToolSchema } from "@/components/shared/ToolSchema";
+import { FAQSchema } from "@/components/shared/FAQSchema";
 
 export const metadata: Metadata = {
   title: "İtalik Yazı: Kopyala-Yapıştır Eğik Yazı Oluşturucu",
@@ -14,6 +15,21 @@ export const metadata: Metadata = {
   }
 };
 
+const italikFaqs = [
+  {
+    question: "İtalik yazı Discord'da çalışır mı?",
+    answer: "Evet. Unicode italik karakterler Discord, Instagram, WhatsApp ve TikTok gibi platformlarda sorunsuz görüntülenir."
+  },
+  {
+    question: "İtalik ve kalın yazıyı aynı anda kullanabilir miyim?",
+    answer: "Evet. Hem kalın hem italik görünümü birleştiren Bold Italic stili de araçta mevcuttur."
+  },
+  {
+    question: "Bazı Türkçe harfler neden italik göründükten sonra farklı görünüyor?",
+    answer: "Bazı Unicode stil setleri belirli Türkçe karakterleri tam desteklemeyebilir. 'Tüm Karakterleri Destekle' etiketli stilleri seçmenizi öneririz."
+  }
+];
+
 const ItalicTextPage = () => {
   return (
     <>
@@ -23,10 +39,12 @@ const ItalicTextPage = () => {
           { name: "İtalik Yazı", item: "/italik-egik-yazi" }
         ]} />
         <ToolSchema 
-          name="İtalik Yazı Oluşturucu"
-          description="İtalik yazı oluşturucu ile metninizi anında eğik fontlara dönüştürün. Sosyal medya için kopyala-yapıştır."
+          name="İtalik Eğik Yazı Oluşturucu"
+          description="İtalik yazı oluşturucu ile metninizi eğik ve zarif yazı stillerine dönüştürün. Instagram, TikTok ve Discord için kopyala-yapıştır ile anında kullanın."
           url="/italik-egik-yazi"
+          type="SoftwareApplication"
         />
+        <FAQSchema faqs={italikFaqs} />
         <HeroGeneratorSection 
             titleTag="div"
             title={
@@ -50,3 +68,4 @@ const ItalicTextPage = () => {
 };
 
 export default ItalicTextPage;
+
