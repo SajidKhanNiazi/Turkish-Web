@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "../layout/Container";
 import { FAQSection } from "../shared/FAQSection";
@@ -17,6 +18,32 @@ export const HomeArticle = () => {
                         [&>h2]:before:content-[''] [&>h2]:before:w-2 [&>h2]:before:h-8 [&>h2]:before:bg-indigo-400 [&>h2]:before:rounded-full
                         [&>h3]:mt-12 [&>h3]:text-2xl [&>h3]:font-bold">
                         
+                        <h2>Şık Yazı Stilleri Nedir?</h2>
+                        <p>
+                            Şık yazı stilleri, standart metinleri Unicode karakter sistemi kullanarak estetik ve dikkat çekici fontlara dönüştüren ücretsiz araçlardır. İndirme veya kurulum gerektirmeden, oluşturduğunuz metni kopyalayarak istediğiniz her platformda anında kullanabilirsiniz.
+                        </p>
+
+                        <figure className="my-12 not-prose max-w-2xl mx-auto">
+                            <Image 
+                                src="/images/instagram-bio-fonts.png" 
+                                alt="Instagram biyografi için şık yazı font örnekleri" 
+                                width={896} 
+                                height={504} 
+                                className="w-full h-auto rounded-2xl object-cover shadow-2xl border border-white/[0.08]"
+                            />
+                            <figcaption className="text-center text-sm text-gray-400 mt-4">
+                                Instagram bio, TikTok ve oyun nickleri için hazır şık yazı örnekleri.
+                            </figcaption>
+                        </figure>
+
+                        <h2>Şık Yazı Stilleri Nerelerde Kullanılır?</h2>
+                        <ul>
+                            <li>Instagram bio</li>
+                            <li>TikTok username</li>
+                            <li>PUBG nick</li>
+                            <li>WhatsApp durum</li>
+                        </ul>
+
                         <h2>Giriş</h2>
                                 <p>
                                     Birçok kişi sosyal medya profillerini daha benzersiz göstermek ister. Ancak bio ya da kullanıcı adı yazdıklarında metin genellikle düz ve sıkıcı görünür. Ben de bir arkadaşımın Instagram profilini düzenlerken aynı sorunla karşılaştım. İsim normal görünüyordu ve hiç dikkat çekmiyordu.
@@ -31,19 +58,41 @@ export const HomeArticle = () => {
                                     Kendi stil sahibi metninizi oluşturmak için aşağıdaki adımları takip edin.
                                 </p>
 
-                                <h3>Adım 1: Metninizi Girin</h3>
+                                <figure className="my-12 not-prose max-w-2xl mx-auto">
+                                    <Image 
+                                        src="/images/generator-copy-feature.png" 
+                                        alt="Şık yazı oluşturucu aracı ile metin kopyalama işlemi" 
+                                        width={896} 
+                                        height={504} 
+                                        className="w-full h-auto rounded-2xl object-cover shadow-2xl border border-white/[0.08]"
+                                    />
+                                    <figcaption className="text-center text-sm text-gray-400 mt-4">
+                                        Metninizi yazın, stilinizi seçin ve tek tıkla kopyalayın.
+                                    </figcaption>
+                                </figure>
+
+                                <h3 className="flex items-center gap-3 sm:gap-4">
+                                    <Image src="/icons/step-1.png" alt="Adım 1: Metninizi Girin" width={56} height={56} className="not-prose m-0 rounded-2xl bg-white/5 p-2 shadow-sm shrink-0" />
+                                    <span>Adım 1: Metninizi Girin</span>
+                                </h3>
                                 <p>
                                     Öncelikle normal metninizi giriş kutusuna yazın. Bu metin adınız, kullanıcı adınız, kısa bir mesaj veya oyun nickiniz olabilir.
                                     Metni yazdığınız anda araç otomatik olarak farklı yazı stilleri seçenekleri üretmeye başlar.
                                 </p>
 
-                                <h3>Adım 2: Yazı Stillerini İnceleyin</h3>
+                                <h3 className="flex items-center gap-3 sm:gap-4">
+                                    <Image src="/icons/step-2.png" alt="Adım 2: Yazı Stillerini İnceleyin" width={56} height={56} className="not-prose m-0 rounded-2xl bg-white/5 p-2 shadow-sm shrink-0" />
+                                    <span>Adım 2: Yazı Stillerini İnceleyin</span>
+                                </h3>
                                 <p>
                                     Metninizi girdikten sonra oluşturucu birçok dekoratif yazı stili gösterir. Her stil, Unicode karakterleri kullanarak farklı bir görsel görünüm oluşturur.
                                     Listede ilerleyerek kişiliğinize veya kullanacağınız platforma uygun olan stili seçebilirsiniz.
                                 </p>
 
-                                <h3>Adım 3: Beğendiğiniz Stili Kopyalayın</h3>
+                                <h3 className="flex items-center gap-3 sm:gap-4">
+                                    <Image src="/icons/step-3.png" alt="Adım 3: Beğendiğiniz Stili Kopyalayın" width={56} height={56} className="not-prose m-0 rounded-2xl bg-white/5 p-2 shadow-sm shrink-0" />
+                                    <span>Adım 3: Beğendiğiniz Stili Kopyalayın</span>
+                                </h3>
                                 <p>
                                     Beğendiğiniz yazı stilini bulduğunuzda metnin yanında bulunan kopyala butonuna tıklayın. Stil sahibi metin anında panonuza kopyalanacaktır.
                                     Bu sayede hem mobil hem de masaüstü kullanıcıları için süreç hızlı ve kolay olur.
@@ -187,7 +236,7 @@ export const HomeArticle = () => {
                                     Stil sahibi metin birçok platformda kullanılabilir.
                                 </p>
 
-                                <h3>Instagram</h3>
+                                <h3><Link href="/sekilli-yazi/instagram-sekilli-yazi">Instagram</Link></h3>
                                 <p>
                                     Instagram kullanıcıları yaratıcı bio kullanmayı sever. Stil sahibi yazı şu alanlarda kullanılabilir:
                                 </p>
@@ -201,7 +250,7 @@ export const HomeArticle = () => {
                                     Yaratıcı bir bio, profilin daha akılda kalıcı görünmesini sağlar.
                                 </p>
 
-                                <h3>WhatsApp</h3>
+                                <h3><Link href="/whatsapp-yazi-stili">WhatsApp</Link></h3>
                                 <p>
                                     WhatsApp kullanıcıları mesajlarını dekoratif yazılarla süslemeyi sever. En yaygın kullanım alanları:
                                 </p>
@@ -219,7 +268,7 @@ export const HomeArticle = () => {
                                     Discord topluluklarında yaratıcı kullanıcı adları oldukça yaygındır. Stil sahibi yazı kullanıcıların sunucularda dikkat çekmesini sağlar.
                                 </p>
 
-                                <h3>Oyun Nickleri</h3>
+                                <h3><Link href="/sekilli-nick-yazma">Oyun Nickleri</Link></h3>
                                 <p>
                                     Stil sahibi yazılar oyuncular arasında oldukça popülerdir. Bu yazılar şu oyunlarda sıkça kullanılır:
                                 </p>

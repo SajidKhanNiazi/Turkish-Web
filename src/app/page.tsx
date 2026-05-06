@@ -7,9 +7,9 @@ import { ExploreStyles } from "@/components/home/ExploreStyles";
 import { FAQSchema } from "@/components/shared/FAQSchema";
 
 export const metadata: Metadata = {
-  title: "Yazı Stilleri: Güzel ve Şekilli Yazı Tipleri (Kopyala) | YazıStilleriPro",
+  title: "Şık Yazı Stilleri Oluşturucu (Kopyala & Yapıştır) | Yazı Stilleri Pro",
   description:
-    "Yazı stilleri oluşturucu ile metninizi anında güzel ve şekilli yazı tiplerine dönüştürün. Kopyala-yapıştır ile Instagram, PUBG ve WhatsApp için kullanın.",
+    "Instagram, TikTok ve oyunlar için şık yazı stilleri oluşturun. Metninizi yazın, farklı fontları anında kopyalayın ve sosyal medyada dikkat çekin. Ücretsiz yazı stili oluşturucu!",
   alternates: {
     canonical: "/"
   }
@@ -63,6 +63,7 @@ const HomePage = () => {
             </span>
           </>
         }
+        description="Instagram, TikTok ve oyunlar için modern, kopyalanabilir şık yazı stilleri oluşturun."
         inputTitle="Şık Yazı Oluşturucu"
         defaultPreviewText="Şık Yazı Stilleri"
       />
