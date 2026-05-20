@@ -93,6 +93,17 @@ export const Header = () => {
             <span className="mx-2 h-4 w-[1px] shrink-0 bg-white/10" aria-hidden />
 
             <Link
+              href="/blog"
+              className={`rounded-full px-4 py-2 text-[12.5px] font-bold transition-all ${
+                pathname.startsWith("/blog")
+                  ? "bg-indigo-500/10 text-indigo-400 shadow-[inset_0_0_12px_rgba(99,102,241,0.1)]"
+                  : "text-gray-400 hover:bg-white/[0.04] hover:text-white"
+              }`}
+            >
+              Blog
+            </Link>
+
+            <Link
               href="/iletisim"
               className={`rounded-full px-4 py-2 text-[12.5px] font-bold transition-all ${
                 pathname === "/iletisim"
@@ -131,7 +142,6 @@ export const Header = () => {
       <div 
         className={`fixed inset-x-0 bottom-0 z-[90] xl:hidden border-t border-white/[0.04] shadow-2xl transition-all duration-500 ease-in-out ${open ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible"}`}
         style={{ top: `${headerHeight}px`, backgroundColor: "#0B0F1A" }}
-        aria-hidden={!open}
         role="dialog"
         aria-modal="true"
         aria-label="Mobil navigasyon menüsü"
@@ -180,6 +190,19 @@ export const Header = () => {
                   variant="cyan"
                 />
               ))}
+
+              <Link
+                href="/blog"
+                className={`flex items-center gap-4 rounded-xl px-5 py-3.5 text-sm font-bold transition-all ${
+                  pathname.startsWith("/blog")
+                    ? "bg-indigo-500/10 text-indigo-400 shadow-[inset_0_0_15px_rgba(99,102,241,0.1)] ring-1 ring-indigo-500/20"
+                    : "text-gray-400 hover:bg-white/[0.04] hover:text-white"
+                }`}
+                onClick={() => setOpen(false)}
+              >
+                <div className={`w-1.5 h-1.5 rounded-full ${pathname.startsWith("/blog") ? 'bg-indigo-400 shadow-[0_0_10px_rgba(129,140,248,0.8)]' : 'bg-gray-700'}`} />
+                Blog
+              </Link>
 
               <Link
                 href="/iletisim"

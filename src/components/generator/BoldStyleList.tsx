@@ -25,7 +25,7 @@ export const BoldStyleList = ({ input }: BoldStyleListProps) => {
       <div className="grid gap-4 w-full">
         {styles.map((style, index) => (
           <StyleResultItem
-            key={style.id}
+            key={`${style.id}-${index}`}
             index={index}
             label={style.label}
             value={style.preview}

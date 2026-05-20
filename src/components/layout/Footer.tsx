@@ -85,9 +85,14 @@ export const Footer = () => {
 
         <div>
           <h3 className="mb-4 text-xs font-black uppercase tracking-widest text-white/90">
-            Yasal & İletişim
+            Kaynaklar & Yasal
           </h3>
           <ul className="space-y-2.5 text-[13px] font-medium text-gray-400">
+            <li>
+              <Link href="/blog" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+                Blog & Rehberler
+              </Link>
+            </li>
             <li>
               <Link href="/hakkimizda" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
                 Hakkımızda

@@ -23,20 +23,33 @@ export function AdBanner({
   style = { display: "block" },
 }: AdBannerProps) {
   const [adLoaded, setAdLoaded] = useState(false);
+  const isMockSlot = dataAdSlot.includes("SLOT_ID");
 
   useEffect(() => {
-    // Only attempt to load ads in production or if needed
-    // AdSense script is globally loaded in layout.tsx
+    // Only attempt to load ads if we have a real slot ID
+    if (isMockSlot) return;
+
     try {
       if (!adLoaded) {
         // @ts-ignore
         (window.adsbygoogle = window.adsbygoogle || []).push({});
         setAdLoaded(true);
       }
-    } catch (err) {
-      console.error("AdSense error:", err);
+    } catch (err: any) {
+      // Ignore React Strict Mode double-push error
+      if (err.message && err.message.includes("already have ads")) {
+        setAdLoaded(true);
+      } else {
+        console.error("AdSense error:", err);
+      }
     }
-  }, [adLoaded]);
+  }, [adLoaded, isMockSlot]);
+
+  // If it's a placeholder slot, we hide it completely so it doesn't break the UI
+  // while waiting for Google AdSense approval.
+  if (isMockSlot) {
+    return null;
+  }
 
   return (
     <div
