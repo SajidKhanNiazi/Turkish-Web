@@ -1,0 +1,312 @@
+﻿
+> turkish-yazi-stilleri@1.0.0 build
+> next build
+
+  Γû▓ Next.js 14.2.3
+
+   Creating an optimized production build ...
+node.exe :  ΓÜá 
+Compiled with warnings
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : 
+NotSpecified: ( ΓÜ    
+á Compiled with warnin 
+   gs:String) [], 
+RemoteE    xception
+    + 
+FullyQualifiedErrorI   
+ d : NativeCommandError
+ 
+
+./node_modules/next/dis
+t/build/deployment-id.j
+s
+There are multiple 
+modules with names 
+that only differ in 
+casing.
+This can lead to 
+unexpected behavior 
+when compiling on a 
+filesystem with other 
+case-semantic.
+Use equal casing. 
+Compare these module 
+identifiers:
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\deployment-
+id.js
+    Used by 1 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\Turkish-Web\n
+ode_modules\next\dist\c
+lient\route-loader.js
+* C:\laragon\www\turkis
+h-web\node_modules\next
+\dist\build\deployment-
+id.js
+    Used by 2 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\turkish-web\n
+ode_modules\next\dist\c
+lient\webpack.js
+
+Import trace for 
+requested module:
+./node_modules/next/dis
+t/build/deployment-id.j
+s
+./node_modules/next/dis
+t/client/route-loader.j
+s
+./node_modules/next/dis
+t/shared/lib/router/rou
+ter.js
+
+./node_modules/next/dis
+t/client/add-base-path.
+js
+There are multiple 
+modules with names 
+that only differ in 
+casing.
+This can lead to 
+unexpected behavior 
+when compiling on a 
+filesystem with other 
+case-semantic.
+Use equal casing. 
+Compare these module 
+identifiers:
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\Turkish-Web\nod
+e_modules\next\dist\cli
+ent\add-base-path.js
+    Used by 2 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\Turkish-Web\n
+ode_modules\next\dist\s
+hared\lib\router\router
+.js
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\turkish-web\nod
+e_modules\next\dist\cli
+ent\add-base-path.js
+    Used by 3 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\turkish-web\n
+ode_modules\next\dist\c
+lient\page-loader.js
+
+Import trace for 
+requested module:
+./node_modules/next/dis
+t/client/add-base-path.
+js
+./node_modules/next/dis
+t/shared/lib/router/rou
+ter.js
+
+./node_modules/next/dis
+t/client/add-locale.js
+There are multiple 
+modules with names 
+that only differ in 
+casing.
+This can lead to 
+unexpected behavior 
+when compiling on a 
+filesystem with other 
+case-semantic.
+Use equal casing. 
+Compare these module 
+identifiers:
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\Turkish-Web\nod
+e_modules\next\dist\cli
+ent\add-locale.js
+    Used by 2 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\Turkish-Web\n
+ode_modules\next\dist\s
+hared\lib\router\router
+.js
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\turkish-web\nod
+e_modules\next\dist\cli
+ent\add-locale.js
+    Used by 3 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\turkish-web\n
+ode_modules\next\dist\c
+lient\page-loader.js
+
+Import trace for 
+requested module:
+./node_modules/next/dis
+t/client/add-locale.js
+./node_modules/next/dis
+t/shared/lib/router/rou
+ter.js
+
+./node_modules/next/dis
+t/client/detect-domain-
+locale.js
+There are multiple 
+modules with names 
+that only differ in 
+casing.
+This can lead to 
+unexpected behavior 
+when compiling on a 
+filesystem with other 
+case-semantic.
+Use equal casing. 
+Compare these module 
+identifiers:
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\Turkish-Web\nod
+e_modules\next\dist\cli
+ent\detect-domain-local
+e.js
+    Used by 2 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\Turkish-Web\n
+ode_modules\next\dist\s
+hared\lib\router\router
+.js
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\turkish-web\nod
+e_modules\next\dist\cli
+ent\detect-domain-local
+e.js
+    Used by 2 
+module(s), i. e.
+    C:\laragon\www\Turk
+ish-Web\node_modules\ne
+xt\dist\build\webpack\l
+oaders\next-swc-loader.
+js??ruleSet[1].rules[15
+].oneOf[7].use[0]!C:\la
+ragon\www\turkish-web\n
+ode_modules\next\dist\s
+hared\lib\router\router
+.js
+
+Import trace for 
+requested module:
+./node_modules/next/dis
+t/client/detect-domain-
+locale.js
+./node_modules/next/dis
+t/shared/lib/router/rou
+ter.js
+
+./node_modules/next/dis
+t/client/has-base-path.
+js
+There are multiple 
+modules with names 
+that only differ in 
+casing.
+This can lead to 
+unexpected behavior 
+when compiling on a 
+filesystem with other 
+case-semantic.
+Use equal casing. 
+Compare these module 
+identifiers:
+* C:\laragon\www\Turkis
+h-Web\node_modules\next
+\dist\build\webpack\loa
+ders\next-swc-loader.js
+??ruleSet[1].rules[15].
+oneOf[7].use[0]!C:\lara
+gon\www\Turkish-Web\nod
+e_modules\next\dist\cli
+ent\has-base-path.js
+    Used by 4 
