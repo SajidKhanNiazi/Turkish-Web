@@ -72,6 +72,37 @@ const BlogPage = () => {
               </div>
             </article>
 
+            {/* Article Card 2 */}
+            <article className="group relative flex flex-col bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.05] hover:border-indigo-500/30 rounded-2xl p-6 transition-all duration-300">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-bold">Oyun & Nick</span>
+                <div className="flex items-center gap-1.5 text-gray-500 text-xs">
+                  <Calendar className="w-3.5 h-3.5" />
+                  Mayıs 2026
+                </div>
+              </div>
+              
+              <h2 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors line-clamp-2">
+                <Link href="/blog/pubg-sekilli-isim-nasil-yapilir" className="before:absolute before:inset-0">
+                  PUBG Şekilli İsim Nasıl Yapılır? En Kolay Yöntemler
+                </Link>
+              </h2>
+              
+              <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-1">
+                PUBG şekilli isim nasıl yapılır öğrenin. En iyi şekilli nick örnekleri, Unicode sembolleri, görünmeyen boşluk yöntemi ve PUBG nick oluşturma rehberi.
+              </p>
+              
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.04]">
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <User className="w-4 h-4" />
+                  Yazı Stilleri Pro
+                </div>
+                <div className="text-indigo-400 flex items-center gap-1 text-sm font-bold group-hover:gap-2 transition-all">
+                  Oku <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </article>
+
             {/* Additional placeholders for future articles can go here */}
 
           </div>
