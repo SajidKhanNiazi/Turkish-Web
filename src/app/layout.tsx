@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import Script from "next/script";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -39,6 +40,20 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="tr" suppressHydrationWarning>
       <head>
+        {/* Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Y1VS7CWMNW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Y1VS7CWMNW');
+          `}
+        </Script>
         {/* Google AdSense Verification & Global Script */}
         <script
           async
