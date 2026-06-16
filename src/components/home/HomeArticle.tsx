@@ -29,6 +29,7 @@ export const HomeArticle = () => {
                                 alt="Instagram biyografi için şık yazı font örnekleri" 
                                 width={896} 
                                 height={504} 
+                                sizes="(max-width: 896px) 100vw, 896px"
                                 className="w-full h-auto rounded-2xl object-cover shadow-2xl border border-white/[0.08]"
                             />
                             <figcaption className="text-center text-sm text-gray-400 mt-4">
@@ -64,6 +65,7 @@ export const HomeArticle = () => {
                                         alt="Şık yazı oluşturucu aracı ile metin kopyalama işlemi" 
                                         width={896} 
                                         height={504} 
+                                        sizes="(max-width: 896px) 100vw, 896px"
                                         className="w-full h-auto rounded-2xl object-cover shadow-2xl border border-white/[0.08]"
                                     />
                                     <figcaption className="text-center text-sm text-gray-400 mt-4">

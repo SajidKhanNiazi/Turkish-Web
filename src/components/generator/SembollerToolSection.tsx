@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Copy, Sparkles, Star, History, Trash2 } from "lucide-react";
 import { sembolCategories, allSymbolsFlat } from "@/data/semboller";
 import clsx from "clsx";
-import { motion, AnimatePresence } from "framer-motion";
+
 
 const vibes = [
   { id: "dark", label: "Dark Vibe", match: ["kalp", "ayraclar", "sayilar"] },
@@ -144,32 +144,23 @@ export const SembollerToolSection = () => {
           </div>
         ) : (
           <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3">
-            <AnimatePresence>
               {filteredSymbols.map((symbol, idx) => (
-                <motion.button
+                <button
                   key={`${symbol}-${idx}`}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  whileHover={{ scale: 1.1, zIndex: 10 }}
-                  whileTap={{ scale: 0.95 }}
                   onClick={() => handleCopy(symbol)}
-                  className="relative group aspect-square flex items-center justify-center text-2xl md:text-3xl text-gray-200 bg-[#0F1423] hover:bg-indigo-500/20 hover:text-indigo-300 rounded-xl border border-white/5 hover:border-indigo-500/50 transition-colors shadow-sm"
+                  className="relative group aspect-square flex items-center justify-center text-2xl md:text-3xl text-gray-200 bg-[#0F1423] hover:bg-indigo-500/20 hover:text-indigo-300 rounded-xl border border-white/5 hover:border-indigo-500/50 transition-all duration-200 shadow-sm hover:scale-110 hover:z-10 active:scale-95 animate-[fadeIn_0.3s_ease-out]"
+                  style={{ animationDelay: `${Math.min(idx * 15, 300)}ms`, animationFillMode: 'both' }}
                 >
                   {symbol}
                   {copiedSymbol === symbol && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="absolute -top-8 bg-indigo-500 text-white text-xs font-bold py-1 px-2 rounded-md shadow-lg pointer-events-none whitespace-nowrap z-50"
+                    <div
+                      className="absolute -top-8 bg-indigo-500 text-white text-xs font-bold py-1 px-2 rounded-md shadow-lg pointer-events-none whitespace-nowrap z-50 animate-[fadeInUp_0.2s_ease-out]"
                     >
                       Kopyalandı!
-                    </motion.div>
+                    </div>
                   )}
-                </motion.button>
+                </button>
               ))}
-            </AnimatePresence>
           </div>
         )}
       </div>

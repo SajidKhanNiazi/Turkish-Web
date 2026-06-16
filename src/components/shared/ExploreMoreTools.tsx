@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks or browser APIs needed
 
 import { CategoryCard } from "./CategoryCard";
 

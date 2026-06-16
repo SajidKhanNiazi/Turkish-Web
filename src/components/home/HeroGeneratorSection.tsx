@@ -1,15 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { Container } from "../layout/Container";
-import { StyleResultList } from "../generator/StyleResultList";
-import { BoldStyleList } from "../generator/BoldStyleList";
-import { ItalicStyleList } from "../generator/ItalicStyleList";
-import { AestheticStyleList } from "../generator/AestheticStyleList";
-import { FontChangerStyleList } from "../generator/FontChangerStyleList";
-import { InstagramStyleList } from "../generator/InstagramStyleList";
-import { WhatsAppStyleList } from "../generator/WhatsAppStyleList";
-import { FloatingParticles } from "./FloatingParticles";
+
+const StyleResultList = dynamic(() => import("../generator/StyleResultList").then(mod => ({ default: mod.StyleResultList })), { ssr: true });
+const BoldStyleList = dynamic(() => import("../generator/BoldStyleList").then(mod => ({ default: mod.BoldStyleList })), { ssr: true });
+const ItalicStyleList = dynamic(() => import("../generator/ItalicStyleList").then(mod => ({ default: mod.ItalicStyleList })), { ssr: true });
+const AestheticStyleList = dynamic(() => import("../generator/AestheticStyleList").then(mod => ({ default: mod.AestheticStyleList })), { ssr: true });
+const FontChangerStyleList = dynamic(() => import("../generator/FontChangerStyleList").then(mod => ({ default: mod.FontChangerStyleList })), { ssr: true });
+const InstagramStyleList = dynamic(() => import("../generator/InstagramStyleList").then(mod => ({ default: mod.InstagramStyleList })), { ssr: true });
+const WhatsAppStyleList = dynamic(() => import("../generator/WhatsAppStyleList").then(mod => ({ default: mod.WhatsAppStyleList })), { ssr: true });
+
+const FloatingParticles = dynamic(() => import("./FloatingParticles").then(mod => mod.FloatingParticles), {
+  ssr: false,
+  loading: () => null,
+});
 
 const EXAMPLE_TEXT = "İsmimi havalı yazı stilleriyle güzelleştir";
 

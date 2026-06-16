@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
@@ -40,7 +40,13 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="tr" suppressHydrationWarning>
       <head>
-        {/* Google Tag */}
+        {/* DNS Prefetch & Preconnect for third-party domains */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Google Tag – afterInteractive to avoid blocking first paint */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Y1VS7CWMNW"
           strategy="afterInteractive"
@@ -50,16 +56,15 @@ const RootLayout = ({ children }: RootLayoutProps) => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-Y1VS7CWMNW');
           `}
         </Script>
-        {/* Google AdSense Verification & Global Script */}
-        <script
-          async
+        {/* Google AdSense – lazyOnload to eliminate render-blocking */}
+        <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4223732842838090"
+          strategy="lazyOnload"
           crossOrigin="anonymous"
-        ></script>
+        />
       </head>
       <body className={`${plusJakarta.variable} font-sans antialiased`} suppressHydrationWarning>
         <div className="flex min-h-screen flex-col bg-[#0B0F1A] text-[#F9FAFB] selection:bg-indigo-400/30 selection:text-white">

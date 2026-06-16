@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks or browser APIs needed
 
 import { Container } from "../layout/Container";
 import { Sparkles, ChevronDown, CheckCircle2 } from "lucide-react";

@@ -1,4 +1,4 @@
-"use client";
+// Server Component — uses native HTML <details> for accordion, no hooks needed
 
 import { MessageCircleQuestion, Plus } from "lucide-react";
 
