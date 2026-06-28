@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDeferredValue } from "react";
 import { generateLetterStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
@@ -46,6 +46,7 @@ const LetterSquareButton = ({ character }: { character: string }) => {
 
 export const LettersToolSection = () => {
     const [word, setWord] = useState("Harf");
+    const deferredWord = useDeferredValue(word);
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -53,7 +54,7 @@ export const LettersToolSection = () => {
     }, []);
     
     // Evaluate word generator
-    const wordStyles = generateLetterStyles(word || "Harf");
+    const wordStyles = generateLetterStyles(deferredWord || "Harf");
 
     return (
         <div className="flex flex-col gap-16 w-full max-w-5xl mx-auto">

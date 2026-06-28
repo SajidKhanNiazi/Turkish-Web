@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useDeferredValue } from "react";
 import { generateNameStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
+import { AdBanner } from "@/components/ads/AdBanner";
 
 const SHUFFLE_ICON = (
   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -12,6 +13,7 @@ const SHUFFLE_ICON = (
 
 export const NameToolSection = () => {
   const [value, setValue] = useState("Sajid");
+  const deferredValue = useDeferredValue(value);
   const [shuffleSeed, setShuffleSeed] = useState(0);
   const [mounted, setMounted] = useState(false);
 
@@ -19,7 +21,7 @@ export const NameToolSection = () => {
     setMounted(true);
   }, []);
 
-  const baseStyles = useMemo(() => generateNameStyles(value || "Sajid"), [value]);
+  const baseStyles = useMemo(() => generateNameStyles(deferredValue || "Sajid"), [deferredValue]);
 
   const shuffledStyles = useMemo(() => {
     if (shuffleSeed === 0) return baseStyles;
@@ -79,6 +81,15 @@ export const NameToolSection = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* Ad Banner directly below the generator */}
+      <div className="mt-4 w-full flex justify-center">
+          <AdBanner 
+              dataAdSlot="2662419402" 
+              className="w-full"
+              style={{ display: "block" }}
+          />
       </div>
 
       {/* Styles Board */}

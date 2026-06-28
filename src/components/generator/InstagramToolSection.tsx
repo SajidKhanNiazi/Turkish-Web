@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDeferredValue } from "react";
 import { generateInstagramSafeStyles, transformTextWithStyle } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
 
 export const InstagramToolSection = () => {
   const [value, setValue] = useState("Profilinizi güzelleştirin");
+  const deferredValue = useDeferredValue(value);
   const [selectedPreviewStyle, setSelectedPreviewStyle] = useState("bold"); // Default preview style index conceptually
   const [mounted, setMounted] = useState(false);
 
@@ -13,13 +14,13 @@ export const InstagramToolSection = () => {
     setMounted(true);
   }, []);
 
-  const styles = generateInstagramSafeStyles(value || "Profilinizi güzelleştirin");
+  const styles = generateInstagramSafeStyles(deferredValue || "Profilinizi güzelleştirin");
 
   const handleClear = () => {
     setValue("");
   };
 
-  const currentPreviewText = transformTextWithStyle(value || "Profilinizi güzelleştirin", selectedPreviewStyle);
+  const currentPreviewText = transformTextWithStyle(deferredValue || "Profilinizi güzelleştirin", selectedPreviewStyle);
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-5xl mx-auto">

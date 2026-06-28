@@ -1,9 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useDeferredValue } from "react";
 import { Container } from "@/components/layout/Container";
 import { FloatingParticles } from "@/components/home/FloatingParticles";
 import { StyleResultItem } from "@/components/generator/StyleResultItem";
+import { AdBanner } from "@/components/ads/AdBanner";
 import {
   generateNickToolStyles,
   nickMatchesFontFilter,
@@ -66,6 +67,7 @@ function bucketByTier(items: NickStyleItem[]): Record<NickTier, NickStyleItem[]>
 
 export const NickGeneratorTool = () => {
   const [value, setValue] = useState("");
+  const deferredValue = useDeferredValue(value);
   const [mounted, setMounted] = useState(false);
   const [fontFilter, setFontFilter] = useState<NickFontFilter>("all");
   const [tab, setTab] = useState<UiTab>("all");
@@ -75,8 +77,8 @@ export const NickGeneratorTool = () => {
   const resultsAnchorRef = useRef<HTMLDivElement>(null);
   const scrollToResultsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const effectiveInput = value.trim() || DEFAULT_PREVIEW_TEXT;
-  const isShowingDefaultPreview = !value.trim();
+  const effectiveInput = deferredValue.trim() || DEFAULT_PREVIEW_TEXT;
+  const isShowingDefaultPreview = !deferredValue.trim();
 
   useEffect(() => {
     setMounted(true);
@@ -216,6 +218,15 @@ export const NickGeneratorTool = () => {
 
               {/* User removed Filter section in previous turn */}
             </div>
+          </div>
+          
+          {/* Ad Banner directly below the generator */}
+          <div className="mt-8 w-full max-w-4xl mx-auto flex justify-center">
+              <AdBanner 
+                  dataAdSlot="2662419402" 
+                  className="w-full"
+                  style={{ display: "block" }}
+              />
           </div>
         </Container>
       </section>

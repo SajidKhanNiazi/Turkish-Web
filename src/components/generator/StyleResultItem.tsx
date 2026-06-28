@@ -53,7 +53,7 @@ export const StyleResultItem = ({
             }
           : undefined
       }
-      className={`group relative flex flex-col gap-3 rounded-xl border border-white/[0.06] bg-[#1F2937] p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/[0.12] hover:shadow-lg hover:shadow-black/20 sm:flex-row sm:items-center sm:justify-between border-l-4 ${accentColor} ${enableCardCopy ? "cursor-pointer" : ""}`}
+      className={`group relative flex flex-col gap-3 rounded-xl border border-white/[0.06] bg-[#1F2937] p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/[0.12] hover:shadow-lg hover:shadow-black/20 sm:flex-row sm:items-center sm:justify-between border-l-4 ${accentColor} ${enableCardCopy ? "cursor-pointer" : ""} will-change-[transform,opacity]`}
       style={{
         animation: `fade-in-up 0.4s ease-out ${animationDelay} both`
       }}

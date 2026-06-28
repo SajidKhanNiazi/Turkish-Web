@@ -140,7 +140,7 @@ export const Header = () => {
 
       {/* Mobile Nav Overlay */}
       <div 
-        className={`fixed inset-x-0 bottom-0 z-[90] xl:hidden border-t border-white/[0.04] shadow-2xl transition-all duration-500 ease-in-out ${open ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible"}`}
+        className={`fixed inset-x-0 bottom-0 z-[90] xl:hidden border-t border-white/[0.04] shadow-2xl transition-[transform,opacity] duration-500 ease-in-out will-change-[transform,opacity] ${open ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible"}`}
         style={{ top: `${headerHeight}px`, backgroundColor: "#0B0F1A" }}
         role="dialog"
         aria-modal="true"

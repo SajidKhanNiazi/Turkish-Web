@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDeferredValue } from "react";
 import { generateAllStyles } from "@/lib/textStyles";
 import { StyleResultItem } from "./StyleResultItem";
+import { AdBanner } from "@/components/ads/AdBanner";
 
 export const PillarToolSection = () => {
     const [text, setText] = useState("Şekilli Yazı");
+    const deferredText = useDeferredValue(text);
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -13,7 +15,7 @@ export const PillarToolSection = () => {
     }, []);
     
     // Generate all global styles
-    const allStyles = generateAllStyles(text || "Şekilli Yazı");
+    const allStyles = generateAllStyles(deferredText || "Şekilli Yazı");
     
     // Group them dynamically by category
     const groupedStyles = allStyles.reduce<{ [key: string]: typeof allStyles }>((acc, style) => {
@@ -52,6 +54,15 @@ export const PillarToolSection = () => {
                         />
                     </div>
                 </div>
+            </div>
+
+            {/* Ad Banner directly below the generator */}
+            <div className="mt-4 w-full flex justify-center">
+                <AdBanner 
+                    dataAdSlot="2662419402" 
+                    className="w-full"
+                    style={{ display: "block" }}
+                />
             </div>
 
             {/* Render grouped styles */}

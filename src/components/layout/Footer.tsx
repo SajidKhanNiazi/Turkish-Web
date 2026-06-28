@@ -34,7 +34,7 @@ export const Footer = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="font-medium text-gray-400 transition-all duration-200 hover:text-gray-200 hover:pl-1"
+                  className="font-medium text-gray-400 transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block"
                 >
                   {item.label}
                 </Link>
@@ -54,7 +54,7 @@ export const Footer = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="font-medium text-gray-400 transition-all duration-200 hover:text-gray-200 hover:pl-1"
+                  className="font-medium text-gray-400 transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block"
                 >
                   {item.label}
                 </Link>
@@ -74,7 +74,7 @@ export const Footer = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="font-medium text-gray-400 transition-all duration-200 hover:text-gray-200 hover:pl-1"
+                  className="font-medium text-gray-400 transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block"
                 >
                   {item.label}
                 </Link>
@@ -89,47 +89,47 @@ export const Footer = () => {
           </h3>
           <ul className="space-y-2.5 text-[13px] font-medium text-gray-400">
             <li>
-              <Link href="/blog" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/blog" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Blog & Rehberler
               </Link>
             </li>
             <li>
-              <Link href="/hakkimizda" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/hakkimizda" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Hakkımızda
               </Link>
             </li>
             <li>
-              <Link href="/sss" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/sss" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Sık Sorulan Sorular
               </Link>
             </li>
             <li>
-              <Link href="/gizlilik" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/gizlilik" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Gizlilik Politikası
               </Link>
             </li>
             <li>
-              <Link href="/kullanim-sartlari" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/kullanim-sartlari" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Kullanım Şartları
               </Link>
             </li>
             <li>
-              <Link href="/cerez-politikasi" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/cerez-politikasi" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Çerez Politikası
               </Link>
             </li>
             <li>
-              <Link href="/sorumluluk-reddi" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/sorumluluk-reddi" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Sorumluluk Reddi
               </Link>
             </li>
             <li>
-              <Link href="/telif-hakki" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/telif-hakki" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 Telif Hakkı / DMCA
               </Link>
             </li>
             <li>
-              <Link href="/iletisim" className="transition-all duration-200 hover:text-gray-200 hover:pl-1">
+              <Link href="/iletisim" className="transition-[color,transform] duration-200 hover:text-gray-200 hover:translate-x-1 inline-block">
                 İletişim
               </Link>
             </li>

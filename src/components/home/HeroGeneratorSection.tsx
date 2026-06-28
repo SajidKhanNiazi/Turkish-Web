@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDeferredValue } from "react";
 import dynamic from "next/dynamic";
 import { Container } from "../layout/Container";
+import { AdBanner } from "../ads/AdBanner";
 
 const StyleResultList = dynamic(() => import("../generator/StyleResultList").then(mod => ({ default: mod.StyleResultList })), { ssr: true });
 const BoldStyleList = dynamic(() => import("../generator/BoldStyleList").then(mod => ({ default: mod.BoldStyleList })), { ssr: true });
@@ -38,9 +39,10 @@ export const HeroGeneratorSection = ({
     defaultPreviewText,
     listType = 'default',
     titleClassName
-}: HeroProps = {}) => {
-    const [value, setValue] = useState("");
-    const [mounted, setMounted] = useState(false);
+    }: HeroProps = {}) => {
+        const [value, setValue] = useState("");
+        const deferredValue = useDeferredValue(value);
+        const [mounted, setMounted] = useState(false);
 
     const TitleTag = titleTag;
 
@@ -112,6 +114,15 @@ export const HeroGeneratorSection = ({
                         </div>
                     </div>
                 </div>
+
+                {/* Ad Banner directly below the generator */}
+                <div className="mt-8 w-full max-w-4xl mx-auto flex justify-center">
+                    <AdBanner 
+                        dataAdSlot="2662419402" 
+                        className="w-full"
+                        style={{ display: "block" }}
+                    />
+                </div>
             </Container>
 
             {/* Results section */}
@@ -120,13 +131,13 @@ export const HeroGeneratorSection = ({
                     <div className="mx-auto max-w-4xl">
                         {mounted && (
                             <>
-                                {listType === 'bold' && <BoldStyleList input={value} />}
-                                {listType === 'italic' && <ItalicStyleList input={value} />}
-                                {listType === 'aesthetic' && <AestheticStyleList input={value} />}
-                                {listType === 'fontChanger' && <FontChangerStyleList input={value} />}
-                                {listType === 'instagram' && <InstagramStyleList input={value} />}
-                                {listType === 'whatsapp' && <WhatsAppStyleList input={value} />}
-                                {listType === 'default' && <StyleResultList input={value} defaultText={defaultPreviewText} />}
+                                {listType === 'bold' && <BoldStyleList input={deferredValue} />}
+                                {listType === 'italic' && <ItalicStyleList input={deferredValue} />}
+                                {listType === 'aesthetic' && <AestheticStyleList input={deferredValue} />}
+                                {listType === 'fontChanger' && <FontChangerStyleList input={deferredValue} />}
+                                {listType === 'instagram' && <InstagramStyleList input={deferredValue} />}
+                                {listType === 'whatsapp' && <WhatsAppStyleList input={deferredValue} />}
+                                {listType === 'default' && <StyleResultList input={deferredValue} defaultText={defaultPreviewText} />}
                             </>
                         )}
                     </div>

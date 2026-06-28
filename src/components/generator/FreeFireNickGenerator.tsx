@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useDeferredValue } from "react";
 import { Container } from "@/components/layout/Container";
 import { FloatingParticles } from "@/components/home/FloatingParticles";
+import { AdBanner } from "@/components/ads/AdBanner";
 import {
   generateFreeFireNickStyles,
   isFFCompatible,
@@ -136,6 +137,7 @@ const NickCard = ({
 /* ── Main generator ── */
 export const FreeFireNickGenerator = () => {
   const [value, setValue] = useState("");
+  const deferredValue = useDeferredValue(value);
   const [mounted, setMounted] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [symbolsOpen, setSymbolsOpen] = useState(false);
@@ -144,8 +146,8 @@ export const FreeFireNickGenerator = () => {
   const resultsRef = useRef<HTMLDivElement>(null);
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const effectiveInput = value.trim() || DEFAULT_INPUT;
-  const isDefault = !value.trim();
+  const effectiveInput = deferredValue.trim() || DEFAULT_INPUT;
+  const isDefault = !deferredValue.trim();
   const charCount = value.length;
 
   /* Hydrate */
@@ -372,6 +374,15 @@ export const FreeFireNickGenerator = () => {
                 Görünmez Boşluk Kopyala
               </button>
             </div>
+          </div>
+
+          {/* Ad Banner directly below the generator */}
+          <div className="mt-8 w-full max-w-4xl mx-auto flex justify-center">
+              <AdBanner 
+                  dataAdSlot="2662419402" 
+                  className="w-full"
+                  style={{ display: "block" }}
+              />
           </div>
         </Container>
       </section>
